@@ -1,5 +1,6 @@
 import './App.css';
 import { BrowserRouter , Routes , Route} from 'react-router-dom';
+import { GlobalProvider } from "./context/GlobalState";
 import LandingPage from './components/LandingPage/LandingPage';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer'
@@ -10,13 +11,15 @@ function App() {
     return ( 
         <div className = "App" >
             <BrowserRouter>
-                <Navbar/>
-                <Routes>
-                    <Route path='/' element={<LandingPage/>}/>
-                    <Route path='/user/:id' element={<UserPage/>}/>
-                    <Route path='/store' element={<Store/>}/>
-                </Routes>
-                <Footer/>     
+                <GlobalProvider>
+                    <Navbar/>
+                    <Routes>
+                        <Route path='/' element={<LandingPage/>}/>
+                        <Route path='/user/:id' element={<UserPage/>}/>
+                        <Route path='/store' element={<Store/>}/>
+                    </Routes>
+                    <Footer/>    
+                </GlobalProvider>
             </BrowserRouter>
         </div>
     );
