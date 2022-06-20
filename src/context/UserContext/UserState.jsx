@@ -2,8 +2,6 @@ import { createContext, useReducer } from "react";
 import axios from "axios";
 import UserReducer from "./UserReducer";
 
-
-
 const token = JSON.parse(localStorage.getItem("token"));
 
 const initialState = {
@@ -16,7 +14,6 @@ const API_URL = "http://localhost:8080";
 export const UserContext = createContext(initialState);
 
 export const UserProvider = ({ children }) => {
-
   const [state, dispatch] = useReducer(UserReducer, initialState);
 
   const login = async (user) => {
@@ -31,14 +28,35 @@ export const UserProvider = ({ children }) => {
     }
   };
 
-  const signUp = async(user) =>{
+  const signUp = async (user) => {
     console.log(user);
     const res = await axios.post(API_URL + "/users/", user);
-      dispatch({
-        type: "REGISTER",
-        payload: res.data,
-      });
-  }
+    dispatch({
+      type: "REGISTER",
+      payload: res.data,
+    });
+  };
+  const logout = async () => {
+
+    const token = JSON.parse(localStorage.getItem("token"));
+    const res = await axios.delete(
+      API_URL + "/users/logout",
+      {
+        headers: {
+          authorization: token,
+        },
+      }
+    );
+
+    dispatch({
+      type: "LOGOUT",
+      payload: res.data,
+    });
+
+    if (res.data) {
+      localStorage.removeItem("token");
+    }
+  };
 
   return (
     <UserContext.Provider
@@ -47,6 +65,7 @@ export const UserProvider = ({ children }) => {
         user: state.user,
         login,
         signUp,
+        logout,
       }}
     >
       {children}
