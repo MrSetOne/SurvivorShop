@@ -31,12 +31,18 @@ export const UserProvider = ({ children }) => {
     }
   };
 
+  const signIn = async(user) =>{
+    console.log(user);
+    // const res = await axios.post(API_URL + "/users/", user);
+  }
+
   return (
     <UserContext.Provider
       value={{
         token: state.token,
         user: state.user,
         login,
+        signIn
       }}
     >
       {children}
