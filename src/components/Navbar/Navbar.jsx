@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav className="Navbar">
-      
       <h2 className="Brand">SurvivorShop</h2>
       <div className="links">
         <span>
@@ -21,6 +20,11 @@ const Navbar = () => {
         <span>
           <h2>
             <Link to="/login">Login </Link>
+          </h2>
+        </span>
+        <span>
+          <h2>
+            <Link to="/signup">Sign up </Link>
           </h2>
         </span>
       </div>

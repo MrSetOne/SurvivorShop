@@ -31,9 +31,13 @@ export const UserProvider = ({ children }) => {
     }
   };
 
-  const signIn = async(user) =>{
+  const signUp = async(user) =>{
     console.log(user);
-    // const res = await axios.post(API_URL + "/users/", user);
+    const res = await axios.post(API_URL + "/users/", user);
+      dispatch({
+        type: "REGISTER",
+        payload: res.data,
+      });
   }
 
   return (
@@ -42,7 +46,7 @@ export const UserProvider = ({ children }) => {
         token: state.token,
         user: state.user,
         login,
-        signIn
+        signUp,
       }}
     >
       {children}

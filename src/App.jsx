@@ -10,7 +10,7 @@ import Footer from './components/Footer/Footer'
 import UserPage from './components/UserPage/UserPage';
 import Store from './components/Store/Store'
 import Login from "./components/Login/Login";
-import SignIn from './components/SignIn/SignIn';
+import SignUp from './components/SignUp/SignUp';
 
 function App() {
     return (
@@ -24,7 +24,7 @@ function App() {
                 <Route path="/user/:id" element={<UserPage />} />
                 <Route path="/store" element={<Store />} />
                 <Route path="/login" element={<Login />} />
-                <Route path="/signin" element={<SignIn/>} />
+                <Route path="/signup" element={<SignUp/>} />
               </Routes>
               <Footer />
             </ProductProvider>
