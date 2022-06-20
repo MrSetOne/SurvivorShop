@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter , Routes , Route} from 'react-router-dom';
-import { GlobalProvider } from "./context/GlobalState";
+import { ProductProvider } from "./context/ProductsContext/ProductState";
 import LandingPage from './components/LandingPage/LandingPage';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer'
@@ -11,7 +11,7 @@ function App() {
     return ( 
         <div className = "App" >
             <BrowserRouter>
-                <GlobalProvider>
+                <ProductProvider>
                     <Navbar/>
                     <Routes>
                         <Route path='/' element={<LandingPage/>}/>
@@ -19,7 +19,7 @@ function App() {
                         <Route path='/store' element={<Store/>}/>
                     </Routes>
                     <Footer/>    
-                </GlobalProvider>
+                </ProductProvider>
             </BrowserRouter>
         </div>
     );

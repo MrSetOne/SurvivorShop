@@ -1,11 +1,11 @@
 import { useContext, useEffect } from "react"
-import { GlobalContext } from "../../context/GlobalState"
+import { ProductContext } from "../../context/ProductsContext/ProductState"
 import StoreItem from "./StoreItem/StoreItem"
 import './Store.scss'
 
 
 const Store = () => {
-    const {allProducts, getAllProducts} = useContext(GlobalContext)
+    const {allProducts, getAllProducts} = useContext(ProductContext)
     useEffect(()=>{
         getAllProducts();
     },[])

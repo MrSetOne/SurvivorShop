@@ -6,11 +6,11 @@ const initialState = {
     allProducts:[]
 };
 
-export const GlobalContext = createContext(initialState);
+export const ProductContext = createContext(initialState);
 
 const API_URL = "http://localhost:8080";
 
-export const GlobalProvider = ({ children }) => {
+export const ProductProvider = ({ children }) => {
   const [state, dispatch] = useReducer(ProductsReducer, initialState);
 
   const getAllProducts = async ()=>{
@@ -21,13 +21,13 @@ export const GlobalProvider = ({ children }) => {
     })
   }
   return (
-    <GlobalContext.Provider
+    <ProductContext.Provider
       value={{
         allProducts: state.allProducts,
         getAllProducts
       }}
     >
       {children}
-    </GlobalContext.Provider>
+    </ProductContext.Provider>
   );
 };
