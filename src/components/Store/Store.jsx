@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react"
 import { GlobalContext } from "../../context/GlobalState"
-import StoreIrem from "./StoreItem/StoreIrem"
+import StoreItem from "./StoreItem/StoreItem"
 import './Store.scss'
 
 
@@ -15,7 +15,7 @@ const Store = () => {
     if(allProducts.length === 0){
         result = (<div class="spinner__test"></div>)
     } else{
-        result = allProducts.map(product => {return(<StoreIrem item={product}/>)})
+        result = allProducts.map(product => {return(<StoreItem item={product}/>)})
     }
     
 
