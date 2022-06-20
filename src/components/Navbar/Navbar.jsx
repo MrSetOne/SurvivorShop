@@ -1,14 +1,31 @@
+import "./Navbar.scss";
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <nav className="Navbar">
-        <h1>Soy el Navbar</h1>
-        <h2 className="Brand">SurvivorShop</h2>
-        <ul>
-            <li>PorfileIcon</li>
-            <li>CartIcon</li>
-        </ul>
-    </nav>
-  )
-}
+      
+      <h2 className="Brand">SurvivorShop</h2>
+      <div className="links">
+        <span>
+          <h2>
+            <Link to="/">Home</Link>
+          </h2>
+        </span>
+        <span>
+          <h2>
+            <Link to="/store">Store </Link>
+          </h2>
+        </span>
 
-export default Navbar
+        <span>
+          <h2>
+            <Link to="/login">Login </Link>
+          </h2>
+        </span>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;

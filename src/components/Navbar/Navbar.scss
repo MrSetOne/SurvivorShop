@@ -1,0 +1,17 @@
+.Navbar {
+     background-color: rgba(51, 51, 51, 0.416);
+  overflow: hidden;
+  padding-right: 50px;
+  padding-left: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.links {
+    display:flex;
+   gap: 25px;
+    justify-content: space-between;
+    
+}
