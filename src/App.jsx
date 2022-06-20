@@ -1,4 +1,6 @@
 import './App.css';
+import "antd/dist/antd.css";
+
 import { BrowserRouter , Routes , Route} from 'react-router-dom';
 import { ProductProvider } from "./context/ProductsContext/ProductState";
 import { UserProvider } from "./context/UserContext/UserState";

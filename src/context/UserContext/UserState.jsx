@@ -1,6 +1,8 @@
-import { createContext } from "react";
+import { createContext, useReducer } from "react";
 import axios from "axios";
 import UserReducer from "./UserReducer";
+
+
 
 const token = JSON.parse(localStorage.getItem("token"));
 
@@ -14,9 +16,12 @@ const API_URL = "http://localhost:8080";
 export const UserContext = createContext(initialState);
 
 export const UserProvider = ({ children }) => {
+
   const [state, dispatch] = useReducer(UserReducer, initialState);
+
   const login = async (user) => {
     const res = await axios.post(API_URL + "/users/login", user);
+    console.log(res.data);
     dispatch({
       type: "LOGIN",
       payload: res.data,
@@ -25,6 +30,7 @@ export const UserProvider = ({ children }) => {
       localStorage.setItem("token", JSON.stringify(res.data.token));
     }
   };
+
   return (
     <UserContext.Provider
       value={{

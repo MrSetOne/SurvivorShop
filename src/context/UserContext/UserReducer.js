@@ -1,5 +1,3 @@
-
-
 const users = (state, action) => {
 
     switch (action.type) {
@@ -7,6 +5,7 @@ const users = (state, action) => {
             return {
                 ...state,
                 token: action.payload.token,
+                user: action.payload.user
             };
         default:
             return state;
