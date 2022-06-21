@@ -10,6 +10,7 @@ const Login = () => {
   const navigate = useNavigate()
 
   const onFinish = (values) => {
+    console.log(values)
     login(values);
     setTimeout(() => {
       navigate("/")

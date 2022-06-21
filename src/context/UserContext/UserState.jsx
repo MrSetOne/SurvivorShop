@@ -3,10 +3,12 @@ import axios from "axios";
 import UserReducer from "./UserReducer";
 
 const token = JSON.parse(localStorage.getItem("token"));
+const username = JSON.parse(localStorage.getItem("username"));
 
 const initialState = {
   token: token ? token : null,
   user: null,
+  username: username ? username : null ,
 };
 
 const API_URL = "http://localhost:8080";
@@ -25,6 +27,7 @@ export const UserProvider = ({ children }) => {
     });
     if (res.data) {
       localStorage.setItem("token", JSON.stringify(res.data.token));
+      localStorage.setItem("username", JSON.stringify(res.data.user.username));
     }
   };
 
@@ -53,8 +56,23 @@ export const UserProvider = ({ children }) => {
     });
     if (res.data) {
       localStorage.removeItem("token");
+      localStorage.removeItem("username");
     }
   };
+
+  const getUser = () =>{
+    const token = JSON.parse(localStorage.getItem("token"));
+    const res = axios.get(API_URL+'/id', 
+    {
+      headers: {
+        authorization: token,
+      }
+    })
+    dispatch({
+      type: "GET_USER",
+      payload: res.data
+    })
+  }
 
   const updateUser = async (values) => {
     const token = JSON.parse(localStorage.getItem("token"));
@@ -78,10 +96,12 @@ export const UserProvider = ({ children }) => {
       value={{
         token: state.token,
         user: state.user,
+        username: state.username,
         login,
         signUp,
         logout,
-        updateUser
+        updateUser,
+        getUser
       }}
     >
       {children}

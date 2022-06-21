@@ -1,50 +1,31 @@
 import "./Navbar.scss";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../../context/UserContext/UserState";
+import {UserOutlined, SmileOutlined} from "@ant-design/icons"
 
 const Navbar = () => {
-const { token, logout } = useContext(UserContext);
+const { token, logout , user, getUser, username} = useContext(UserContext);
 
-const logoutUser = () => {
-  logout();
-};
+  const doLogout = () =>{
+    console.log("le has dado");
+    logout()
+  }
 
   return (
     <nav className="Navbar">
       <h2 className="Brand">SurvivorShop</h2>
       <div className="links">
-        
-        <span>
-          <h2>
-            <Link to="/">Home</Link>
-          </h2>
-        </span>
-        <span>
-          <h2>
-            <Link to="/store">Store </Link>
-          </h2>
-        </span>
-        
-        <span onClick={logoutUser}>
-          <Link to="/">Logout</Link>
-        </span>
-        <span>
-          <h2>
-            <Link to="/login">Login </Link>
-          </h2>
-        </span>
-        <span>
-          <h2>
-            <Link to="/signup">Sign up </Link>
-          </h2>
-        </span>
-        <span>
-          <h2>
-            <Link to="/update">Update</Link>
-          </h2>
-        </span>
-
+        <Link to="/">Home</Link>
+        {token?
+        <div style={{display:"flex"}}>
+          <SmileOutlined />
+          <h2>{username}</h2>
+          <p>update</p>
+          <p onClick={()=>doLogout()}>logout</p>
+        </div>
+        :
+        <Link to="/login"><UserOutlined/></Link>}
       </div>
     </nav>
   );

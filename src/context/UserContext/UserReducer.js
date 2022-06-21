@@ -5,7 +5,8 @@ const users = (state, action) => {
             return {
                 ...state,
                 token: action.payload.token,
-                user: action.payload.user
+                user: action.payload.user,
+                username: action.payload.user.username
             };
 
         case "SIGNUP":
@@ -17,12 +18,18 @@ const users = (state, action) => {
             return {
                 ...state,
                 user: null,
-                token: null
+                token: null,
+                username: null
             };
         case "UPDATE_USER":
             return {
                 ...state,
                 user: {...action.payload.userUpdated }
+            };
+        case "GET_USER":
+            return {
+                ...state,
+                user: action.payload
             }
         default:
             return state;
