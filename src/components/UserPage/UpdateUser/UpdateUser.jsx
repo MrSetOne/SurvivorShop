@@ -1,7 +1,6 @@
 import { useContext, useEffect } from "react";
-import { UserContext } from "../../context/UserContext/UserState";
+import { UserContext } from "../../../context/UserContext/UserState";
 import { Form, Input, Button } from "antd";
-import { useNavigate } from "react-router-dom";
 
 
 
@@ -30,12 +29,6 @@ const UpdateUser = () => {
           label="username"
           name="username"
           initialValue={user.username}
-          rules={[
-            {
-              required: true,
-              message: "Please input your username!",
-            },
-          ]}
         >
           <Input />
         </Form.Item>
@@ -43,13 +36,6 @@ const UpdateUser = () => {
           label="email"
           name="email"
           initialValue={user.email}
-          rules={[
-            {
-              required: true,
-              message: "Please input your email!",
-              type: "email",
-            },
-          ]}
         >
           <Input />
         </Form.Item>
@@ -57,12 +43,6 @@ const UpdateUser = () => {
           label="adress"
           name="adress"
           initialValue={user.adress}
-          rules={[
-            {
-              required: true,
-              message: "Please input your username!",
-            },
-          ]}
         >
           <Input />
         </Form.Item>

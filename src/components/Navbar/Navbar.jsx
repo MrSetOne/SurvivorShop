@@ -3,12 +3,14 @@ import { Link } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../../context/UserContext/UserState";
 import {UserOutlined, SmileOutlined, ShoppingCartOutlined} from "@ant-design/icons"
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
 const { token, logout , user, getUser, username} = useContext(UserContext);
+const navigate = useNavigate()
 
-  const doLogout = () =>{
-    console.log("le has dado");
+  const doLogout = async () =>{
+    await navigate("/")
     logout()
   }
 
@@ -19,9 +21,7 @@ const { token, logout , user, getUser, username} = useContext(UserContext);
         <Link to="/">Home</Link>
         {token?
         <div style={{display:"flex"}}>
-          <SmileOutlined />
-          <h2>{username}</h2>
-          <p>update</p>
+          <Link to="/user">{username}</Link>
           <p onClick={()=>doLogout()}>logout</p>
           <Link to="/cart"><ShoppingCartOutlined/></Link>
         </div>

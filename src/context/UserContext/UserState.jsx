@@ -60,14 +60,16 @@ export const UserProvider = ({ children }) => {
     }
   };
 
-  const getUser = () =>{
+  const getUser = async () =>{
     const token = JSON.parse(localStorage.getItem("token"));
-    const res = axios.get(API_URL+'/id', 
+    console.log("se ejecuta2")
+    const res = await axios.get(API_URL+'/users/id', 
     {
       headers: {
         authorization: token,
       }
     })
+    console.log(res)
     dispatch({
       type: "GET_USER",
       payload: res.data

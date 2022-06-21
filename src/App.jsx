@@ -10,7 +10,6 @@ import Footer from './components/Footer/Footer'
 import UserPage from './components/UserPage/UserPage';
 import Store from './components/Store/Store'
 import LogPage from "./components/LogPage/LogPage";
-import UpdateUser from './components/UpdateUser/UpdateUser';
 import Cart from './components/Cart/Cart'
 import { OrdersProvider } from "./context/OrdersContext/OrderState";
 
@@ -24,10 +23,9 @@ function App() {
               <Navbar />
               <Routes>
                 <Route path="/" element={<LandingPage />} />
-                <Route path="/user/:id" element={<UserPage />} />
+                <Route path="/user" element={<UserPage />} />
                 <Route path="/store" element={<Store />} />
                 <Route path="/logpage" element={<LogPage />} />
-                <Route path="/update" element={<UpdateUser/>} />
                 <Route path="/cart" element={<Cart/>} />
               </Routes>
               <Footer />
