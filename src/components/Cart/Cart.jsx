@@ -11,6 +11,7 @@ const Cart = () => {
   }
 
 const createNewOrder = () => {
+  console.log(cart);
   createOrder(cart);
   clearCart();
 };
