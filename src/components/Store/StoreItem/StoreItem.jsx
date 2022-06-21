@@ -3,7 +3,6 @@ import { ProductContext } from "../../../context/ProductsContext/ProductState";
 
 const StoreItem = ({ item }) => {
   const { addCart, cart } = useContext(ProductContext);
-  console.log("hey", cart);
 
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
