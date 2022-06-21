@@ -12,6 +12,7 @@ import Store from './components/Store/Store'
 import Login from "./components/Login/Login";
 import SignUp from './components/SignUp/SignUp';
 import UpdateUser from './components/UpdateUser/UpdateUser';
+import Cart from "./components/Cart/Cart";
 
 function App() {
     return (
@@ -25,8 +26,9 @@ function App() {
                 <Route path="/user/:id" element={<UserPage />} />
                 <Route path="/store" element={<Store />} />
                 <Route path="/login" element={<Login />} />
-                <Route path="/signup" element={<SignUp/>} />
-                <Route path="/update" element={<UpdateUser/>} />
+                <Route path="/signup" element={<SignUp />} />
+                <Route path="/update" element={<UpdateUser />} />
+                <Route path="/cart" element={<Cart />} />
               </Routes>
               <Footer />
             </ProductProvider>
