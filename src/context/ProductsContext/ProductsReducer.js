@@ -5,8 +5,22 @@ const products = (state, action) => {
                 ...state,
                 allProducts: action.payload
             }
+        case "ADD_CART":
+            return {
+                ...state,
+                cart: [...state.cart, action.payload],
+            };
+        case "CLEAR_CART":
+            return {
+                ...state,
+                cart: [],
+            };
         default:
             return state;
+
     }
+
+
 };
+
 export default products;

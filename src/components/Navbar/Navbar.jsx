@@ -2,7 +2,7 @@ import "./Navbar.scss";
 import { Link } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../../context/UserContext/UserState";
-import {UserOutlined, SmileOutlined} from "@ant-design/icons"
+import {UserOutlined, SmileOutlined, ShoppingCartOutlined} from "@ant-design/icons"
 
 const Navbar = () => {
 const { token, logout , user, getUser, username} = useContext(UserContext);
@@ -23,6 +23,7 @@ const { token, logout , user, getUser, username} = useContext(UserContext);
           <h2>{username}</h2>
           <p>update</p>
           <p onClick={()=>doLogout()}>logout</p>
+          <Link to="/cart"><ShoppingCartOutlined/></Link>
         </div>
         :
         <Link to="/logpage"><UserOutlined/></Link>}

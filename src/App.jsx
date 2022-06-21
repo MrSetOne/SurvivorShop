@@ -1,7 +1,7 @@
-import './App.css';
+import "./App.css";
 import "antd/dist/antd.css";
 
-import { BrowserRouter , Routes , Route} from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ProductProvider } from "./context/ProductsContext/ProductState";
 import { UserProvider } from "./context/UserContext/UserState";
 import LandingPage from './components/LandingPage/LandingPage';
@@ -11,13 +11,16 @@ import UserPage from './components/UserPage/UserPage';
 import Store from './components/Store/Store'
 import LogPage from "./components/LogPage/LogPage";
 import UpdateUser from './components/UpdateUser/UpdateUser';
+import Cart from './components/Cart/Cart'
+import { OrdersProvider } from "./context/OrdersContext/OrderState";
 
 function App() {
-    return (
-      <div className="App">
-        <BrowserRouter>
+  return (
+    <div className="App">
+      <BrowserRouter>
           <UserProvider>
             <ProductProvider>
+              <OrdersProvider>
               <Navbar />
               <Routes>
                 <Route path="/" element={<LandingPage />} />
@@ -25,13 +28,15 @@ function App() {
                 <Route path="/store" element={<Store />} />
                 <Route path="/logpage" element={<LogPage />} />
                 <Route path="/update" element={<UpdateUser/>} />
+                <Route path="/cart" element={<Cart/>} />
               </Routes>
               <Footer />
+              </OrdersProvider>
             </ProductProvider>
           </UserProvider>
         </BrowserRouter>
-      </div>
-    );
+    </div>
+  );
 }
 
 export default App;
