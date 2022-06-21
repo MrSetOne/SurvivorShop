@@ -6,12 +6,14 @@ import { useNavigate } from "react-router-dom";
 
 
 const UpdateUser = () => {
-    const {user} = useContext(UserContext)
-
-    console.log(user);
-
-    const onFinish = (values) => {console.log("holi")}
-    const onFinishFailed = (errorInfo) => {"holi2"}
+    const {user, updateUser} = useContext(UserContext)
+    const onFinish = (values) => {
+      updateUser(values)
+    }
+    
+    const onFinishFailed = (errorInfo) => {
+      console.log("Failed:", errorInfo);
+    };
 
   return (
     <div className="UpdateUser">

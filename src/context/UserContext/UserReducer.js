@@ -19,6 +19,11 @@ const users = (state, action) => {
                 user: null,
                 token: null
             };
+        case "UPDATE_USER":
+            return {
+                ...state,
+                user: {...action.payload.userUpdated }
+            }
         default:
             return state;
     }

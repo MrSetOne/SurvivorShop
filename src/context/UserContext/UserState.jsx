@@ -47,16 +47,31 @@ export const UserProvider = ({ children }) => {
         },
       }
     );
-
     dispatch({
       type: "LOGOUT",
       payload: res.data,
     });
-
     if (res.data) {
       localStorage.removeItem("token");
     }
   };
+
+  const updateUser = async (values) => {
+    const token = JSON.parse(localStorage.getItem("token"));
+    const res = await axios.put(
+      API_URL + "/users/",
+      values,
+      {
+        headers: {
+          authorization: token,
+        },
+      }
+    );
+    dispatch({
+      type: "UPDATE_USER",
+      payload: res.data,
+    })
+  }
 
   return (
     <UserContext.Provider
@@ -66,6 +81,7 @@ export const UserProvider = ({ children }) => {
         login,
         signUp,
         logout,
+        updateUser
       }}
     >
       {children}
