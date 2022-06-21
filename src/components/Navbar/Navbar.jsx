@@ -25,7 +25,7 @@ const { token, logout , user, getUser, username} = useContext(UserContext);
           <p onClick={()=>doLogout()}>logout</p>
         </div>
         :
-        <Link to="/login"><UserOutlined/></Link>}
+        <Link to="/logpage"><UserOutlined/></Link>}
       </div>
     </nav>
   );

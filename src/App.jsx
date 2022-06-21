@@ -9,8 +9,7 @@ import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer'
 import UserPage from './components/UserPage/UserPage';
 import Store from './components/Store/Store'
-import Login from "./components/Login/Login";
-import SignUp from './components/SignUp/SignUp';
+import LogPage from "./components/LogPage/LogPage";
 import UpdateUser from './components/UpdateUser/UpdateUser';
 
 function App() {
@@ -24,8 +23,7 @@ function App() {
                 <Route path="/" element={<LandingPage />} />
                 <Route path="/user/:id" element={<UserPage />} />
                 <Route path="/store" element={<Store />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/signup" element={<SignUp/>} />
+                <Route path="/logpage" element={<LogPage />} />
                 <Route path="/update" element={<UpdateUser/>} />
               </Routes>
               <Footer />
