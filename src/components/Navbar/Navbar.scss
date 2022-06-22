@@ -1,17 +1,53 @@
-.Navbar {
-     background-color: rgba(51, 51, 51, 0.416);
-  overflow: hidden;
-  padding-right: 50px;
-  padding-left: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.links {
-    display:flex;
-   gap: 25px;
-    justify-content: space-between;
-    
+.Navbar__container {
+    width: 100vw;
+    background-color: rgba(51, 51, 51, 0.416);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .Navbar {
+        width: min(100rem, 92vw);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 0;
+        .links {
+            * {
+                font-size: 1.7rem;
+            }
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            .navigate {
+                display: flex;
+                height: min-content;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+                p {
+                    margin: 0;
+                }
+                .user__icon {
+                    background-color: green;
+                    height: 3rem;
+                    aspect-ratio: 1 / 1;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+    .SubNavBar {
+        background-color: rgb(194, 194, 194);
+        width: 100%;
+        display: flex;
+        padding: .5rem 2rem;
+        gap: 1rem;
+        a {
+            font-size: 1.7rem;
+        }
+    }
 }
