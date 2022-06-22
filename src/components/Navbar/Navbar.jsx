@@ -34,8 +34,8 @@ const navigate = useNavigate()
         </div>
       </nav>
       <nav className="SubNavBar">
-      <Link to="/">Home</Link>
-      <Link to="/store">Store</Link>          
+        <Link to="/">Home</Link>
+        <Link to="/store">Store</Link>          
       </nav>
     </div>
   );

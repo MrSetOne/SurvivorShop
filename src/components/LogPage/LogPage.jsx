@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Login from "./Login/Login";
 import SignUp from "./SignUp/SignUp";
+import './LogPage.scss'
 
 const LogPage = () => {
 
@@ -10,13 +11,17 @@ const LogPage = () => {
 
   return (
     <section className="LogPage">
-        <div>
-            <h1>HoliHoliHoli</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremq</p>
+        <div className="LogPage__info">
+            <h1>Rick approves</h1>
+            <p>and he is still alive...</p>
         </div>
+        <div className="LogPage__forms">
         {needSignUp?<SignUp/>:<Login/>}
-        <button onClick={()=>changeNeedSignUp(false)}>LogIn</button>
-        <button onClick={()=>changeNeedSignUp(true)}>SignUp</button>
+        {needSignUp?
+          <button onClick={()=>changeNeedSignUp(false)} className="LogPage__btn">LogIn</button>:
+          <button onClick={()=>changeNeedSignUp(true)} className="LogPage__btn">SignUp</button>
+        }
+        </div>
     </section>
   )
 }

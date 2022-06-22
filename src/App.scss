@@ -1,0 +1,9 @@
+@import './fonts.scss';
+@import './colors.scss';
+* {
+    font-family: $standard-font;
+}
+
+body {
+    background-color: $dark;
+}

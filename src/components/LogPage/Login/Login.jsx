@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { UserContext } from "../../../context/UserContext/UserState";
 import { Form, Input, Button } from "antd";
 import { useNavigate } from "react-router-dom";
+import './Login.scss'
 
 
 const Login = () => {
@@ -22,7 +23,8 @@ const Login = () => {
   };
 
   return (
-    <div className="container">
+    <div className="form__container">
+      <h2 className="form__title">-LOGIN-</h2>
       <Form
         name="basic"
         labelCol={{ span: 8 }}

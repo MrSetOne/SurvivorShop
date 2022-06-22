@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { UserContext } from "../../../context/UserContext/UserState";
 import { Form, Input, Button } from "antd";
 import { useNavigate } from "react-router-dom";
+import './SignUp.scss'
 
 const SignUp = () => {
   const { signUp } = useContext(UserContext);
@@ -20,7 +21,8 @@ const SignUp = () => {
   };
 
   return (
-    <div className="Signup">
+    <div className="form__container">
+      <h2 className="form__title">-SIGN UP-</h2>
       <Form
         name="basic"
         labelCol={{ span: 8 }}
