@@ -35,6 +35,14 @@ export const ProductProvider = ({ children }) => {
       type: "CLEAR_CART",
     });
   };
+const removeItem = (product) => {
+  console.log(product)
+  dispatch({
+    type: "REMOVE_ITEM",
+    payload: product
+  });
+}
+
   return (
     <ProductContext.Provider
       value={{
@@ -42,7 +50,8 @@ export const ProductProvider = ({ children }) => {
         cart: state.cart,
         getAllProducts,
         addCart,
-        clearCart
+        clearCart,
+        removeItem
       }}
     >
       {children}
