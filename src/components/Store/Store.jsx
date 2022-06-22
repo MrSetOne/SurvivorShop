@@ -21,8 +21,8 @@ const Store = () => {
 
   return (
     <main className="Store">
-      <h1>Soy la vista de tienda</h1>
-      {result}
+      <h1 className="title">Products</h1>
+      <div className="products">{result}</div>
     </main>
   );
 };
