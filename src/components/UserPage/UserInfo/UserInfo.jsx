@@ -1,9 +1,12 @@
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import { UserContext } from "../../../context/UserContext/UserState"
 
 const UserInfo = () => {
-
-    const {user} = useContext(UserContext)
+  const {user, getUser} = useContext(UserContext)
+  
+  if(!user){
+    return(<h1>Cargando...</h1>)
+  }
 
   return (
     <section className="UserInfo">
