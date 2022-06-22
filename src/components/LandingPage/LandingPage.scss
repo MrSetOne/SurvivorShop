@@ -1,0 +1,100 @@
+@import '../../colors.scss';
+@import '../../fonts.scss';
+.LandingPage {
+    width: 100%;
+    h1 {
+        display: block;
+        text-align: center;
+        color: $green;
+        text-transform: uppercase;
+        font-family: $headers-font;
+        font-weight: 700;
+        font-size: 15vw;
+        margin-bottom: 0;
+        margin-top: -2rem;
+    }
+    .LandingPage__container {
+        display: flex;
+        flex-direction: column;
+        .LandingPage__puppy {
+            background-image: url(../../assets/puppyjpg.jpg);
+            background-size: cover;
+            background-position: center left;
+            height: 30rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            padding: 4rem;
+            h2 {
+                font-size: 10vw;
+                font-family: $impact-font;
+                margin-bottom: 0;
+                text-align: end;
+                line-height: .7;
+            }
+            p {
+                font-size: 2rem;
+            }
+        }
+        .LandingPage__knifes {
+            height: 30rem;
+            background-image: url(./../../assets/knives.png);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h2 {
+                color: white;
+                font-family: $headers-font;
+                font-size: 13vw;
+                margin-bottom: 0;
+            }
+        }
+        .LandingPage__car {
+            height: 30rem;
+            background-image: url(./../../assets/Hyundai-Zombie.jpg);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 1rem 2rem;
+            h2 {
+                font-size: 5rem;
+                font-family: $headers-font;
+            }
+        }
+    }
+}
+
+@media (min-width: 750px) {
+    .LandingPage {
+        .LandingPage__container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: .5rem;
+            .LandingPage__knifes {
+                h2 {
+                    font-size: 6vw;
+                }
+            }
+            .LandingPage__puppy {
+                grid-column: span 2;
+            }
+        }
+    }
+}
+
+@media (hover: hover) {
+    .LandingPage {
+        .LandingPage__container>* {
+            opacity: .5;
+            transition: .5s;
+        }
+        .LandingPage__container>*:hover {
+            opacity: 1;
+        }
+    }
+}
