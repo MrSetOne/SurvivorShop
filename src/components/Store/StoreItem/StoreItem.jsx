@@ -10,14 +10,17 @@ const StoreItem = ({ item }) => {
 
   return (
     <article className="StoreItem" key={item.id}>
-      <h3>{item.name}</h3>
-
-      <button onClick={() => addCart(item)}>Add Cart</button>
       <img
         src={`http://localhost:8080/${item.img}`}
         alt={item.name}
         width="200px"
       />
+      <div className="StoreItem__info">
+        <h3 className="StoreItem__name">{item.name}</h3>
+        <h3>Price: {item.price} ₸</h3>
+      </div>
+
+      <button onClick={() => addCart(item)}>Add Cart</button>
     </article>
   );
 };
