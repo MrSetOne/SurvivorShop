@@ -1,30 +1,50 @@
 @import '../../../colors.scss';
 .cart__container {
     width: 100%;
-    .cart__item {
-        width: 100%;
+    .cart__btns {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        gap: 1rem;
-        padding: 1rem 0;
-        border-bottom: 2px solid $mid-blue;
-        .cart__item--info {
-            display: flex;
-            flex-direction: column;
-        }
-        .cart__item--trash {
-            font-size: 1.8rem;
+        gap: 2rem;
+        margin-top: 2rem;
+        width: 100%;
+        button {
+            outline: none;
+            border: none;
+            border-radius: 5rem;
+            width: 75%;
+            color: black;
             padding: 1rem;
-            background-color: $dark-green;
-            border-radius: 50%;
+            background-color: $green;
+            font-weight: 700;
             transition: .5s;
         }
-        .cart__item--trash:hover {
-            background-color: $green;
+        button:hover {
+            background-color: $dark-green;
         }
-        * {
-            margin: 0;
+        button:nth-child(2) {
+            background-color: rgb(255, 88, 88);
         }
+        button:nth-child(2):hover {
+            background-color: rgb(231, 2, 2);
+        }
+    }
+}
+
+.Empty__cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    span {
+        font-size: 10rem;
+        padding-bottom: 1.5rem;
+    }
+    p {
+        border-top: 2px solid white;
+        font-size: 1.7rem;
+        padding-top: 1.5rem;
     }
 }

@@ -36,7 +36,6 @@ export const ProductProvider = ({ children }) => {
     });
   };
 const removeItem = (product) => {
-  console.log(product)
   dispatch({
     type: "REMOVE_ITEM",
     payload: product
@@ -48,7 +47,13 @@ const searchBar = async (e) => {
 
   dispatch({
     type: "SEARCH_BAR",
-    payload: results.data
+    payload: results.data});
+  }
+  
+const updateAmount = (i, amount) =>{
+  dispatch({
+    type:"UPDATE__AMOUNT",
+    payload:{i,amount}
   })
 }
 
@@ -61,7 +66,8 @@ const searchBar = async (e) => {
         addCart,
         clearCart,
         removeItem,
-        searchBar
+        searchBar,
+        updateAmount
       }}
     >
       {children}

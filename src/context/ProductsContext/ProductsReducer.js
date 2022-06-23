@@ -6,6 +6,7 @@ const products = (state, action) => {
                 allProducts: action.payload
             }
         case "ADD_CART":
+            action.payload.amount = 1;
             return {
                 ...state,
                 cart: [...state.cart, action.payload],
@@ -20,18 +21,22 @@ const products = (state, action) => {
             return {
                 ...state,
                 cart: [...state.cart]
+            };
+        case "UPDATE__AMOUNT":
+            state.cart[action.payload.i].amount = action.payload.amount
+            return {
+                ...state,
+                cart: [...state.cart]
+
             }
-              case "SEARCH_BAR":
+        case "SEARCH_BAR":
             return {
                 ...state,
                 allProducts: action.payload
             }
         default:
             return state;
-
     }
-
-
 };
 
 export default products;

@@ -1,40 +1,51 @@
 import { useContext } from "react";
 import { ProductContext } from "../../../context/ProductsContext/ProductState";
 import { OrdersContext } from "../../../context/OrdersContext/OrderState";
-import { DeleteOutlined} from "@ant-design/icons"
+import { DeleteOutlined, ShoppingCartOutlined} from "@ant-design/icons"
 import './Cart.scss'
+import CartItem from "./CartItem/CartItem";
 
 const Cart = () => {
   const { cart, clearCart, removeItem } = useContext(ProductContext);
   const { createOrder } = useContext(OrdersContext);
 
   if (cart.length <= 0) {
-    return <span>No tienes ningún producto añadido</span>;
+    return (
+      <div className="Empty__cart">
+        <ShoppingCartOutlined />
+        <p>No tienes ningún producto añadido</p>
+      </div>
+      )
   }
 
+  let total = 0
+
+  cart.forEach(element => {
+    console.log(element);
+    let toSum = element.price * element.amount
+    total += toSum
+    console.log(total);
+  });
+  
   const createNewOrder = () => {
-    console.log(cart);
     createOrder(cart);
     clearCart();
   };
-
-  const cartItem = cart.map((cartItem, i) => {
+  
+  const cartItems = cart.map((cartItem, i) => {
     return (
-      <div className="cart__item" key={i}>
-        <div className="cart__item--info">
-          <h2>{cartItem.name}</h2>
-          <p>{cartItem.price.toFixed(2)} ₸</p>
-        </div>
-        <DeleteOutlined className="cart__item--trash" onClick={() => removeItem(i)} />
-      </div>
-    );
-  });
+      <CartItem cartItem={cartItem} i={i}/>
+      );
+    });
 
   return (
     <div className="cart__container">
-      {cartItem}
-      <button onClick={() => clearCart()}>Clear cart</button>
-      <button onClick={() => createNewOrder()}>Create Order</button>
+      {cartItems}
+      <h2>Total: {total.toFixed(2)}</h2>
+      <div className="cart__btns">
+        <button onClick={() => createNewOrder()}>Create Order</button>
+        <button onClick={() => clearCart()}>Clear cart</button>
+      </div>
     </div>
   );
 };
