@@ -36,11 +36,17 @@ export const ProductProvider = ({ children }) => {
     });
   };
 const removeItem = (product) => {
-  console.log(product)
   dispatch({
     type: "REMOVE_ITEM",
     payload: product
   });
+}
+
+const updateAmount = (i, amount) =>{
+  dispatch({
+    type:"UPDATE__AMOUNT",
+    payload:{i,amount}
+  })
 }
 
   return (
@@ -51,7 +57,8 @@ const removeItem = (product) => {
         getAllProducts,
         addCart,
         clearCart,
-        removeItem
+        removeItem,
+        updateAmount
       }}
     >
       {children}

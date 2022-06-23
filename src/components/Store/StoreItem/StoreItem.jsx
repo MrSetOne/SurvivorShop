@@ -4,6 +4,14 @@ import { ProductContext } from "../../../context/ProductsContext/ProductState";
 const StoreItem = ({ item }) => {
   const { addCart, cart } = useContext(ProductContext);
 
+  const tryToEntry = (item) =>{
+    if(cart.some(cartItem => cartItem.id === item.id)){
+    }
+    if(!cart.some(cartItem => cartItem.id === item.id)){
+      addCart(item)
+    }
+  }
+
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
@@ -20,7 +28,7 @@ const StoreItem = ({ item }) => {
         <h3>Price: {item.price} ₸</h3>
       </div>
 
-      <button onClick={() => addCart(item)}>Add Cart</button>
+      <button onClick={() => tryToEntry(item)}>Add Cart</button>
     </article>
   );
 };
