@@ -1,0 +1,30 @@
+@import '../../../colors.scss';
+.cart__container {
+    width: 100%;
+    .cart__item {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 0;
+        border-bottom: 2px solid $mid-blue;
+        .cart__item--info {
+            display: flex;
+            flex-direction: column;
+        }
+        .cart__item--trash {
+            font-size: 1.8rem;
+            padding: 1rem;
+            background-color: $dark-green;
+            border-radius: 50%;
+            transition: .5s;
+        }
+        .cart__item--trash:hover {
+            background-color: $green;
+        }
+        * {
+            margin: 0;
+        }
+    }
+}
