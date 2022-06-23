@@ -1,6 +1,7 @@
 import { useContext, useEffect } from "react";
 import { UserContext } from "../../../context/UserContext/UserState";
 import { Form, Input, Button } from "antd";
+import '../UpdateUser/UpdateUser.scss';
 
 
 
@@ -47,7 +48,7 @@ const UpdateUser = () => {
           <Input />
         </Form.Item>
         <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-          <Button type="primary" htmlType="submit">
+          <Button className="button-update" type="primary" htmlType="submit">
             Submit
           </Button>
         </Form.Item>

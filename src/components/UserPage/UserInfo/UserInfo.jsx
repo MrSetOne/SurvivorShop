@@ -10,9 +10,9 @@ const UserInfo = () => {
 
   return (
     <section className="UserInfo">
-        <h2>{user.username}</h2>
-        <h3>{user.email}</h3>
-        <h3>{user.adress}</h3>
+        <h3>Your name: {user.username}</h3>
+        <h3>Your email: {user.email}</h3>
+        <h3>Your address: {user.adress}</h3>
     </section>
   )
 }

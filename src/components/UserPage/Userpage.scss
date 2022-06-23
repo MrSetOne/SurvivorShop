@@ -1,0 +1,60 @@
+@import "../../colors.scss";
+.UserInfo {
+    background-color: $light;
+    border-radius: 2rem;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 16px 0 rgba(183, 27, 27, 0.9);
+  padding: 10px 10px;
+  h3 {
+      color: $dark;
+    }
+}
+
+.UserInfo-div {
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+}
+h1 {
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button{
+    background-color: $dark-green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px;
+  border-radius: 2rem;
+  
+  
+}
+.button:hover{
+  background-color: $green;
+}
+.UserPage {
+    
+    align-items: center;
+    justify-content: center;
+   
+}
+.button-div {
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile-img {
+    color: $light;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

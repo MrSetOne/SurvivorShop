@@ -2,6 +2,8 @@ import { useContext, useEffect, useState } from "react"
 import { UserContext } from "../../context/UserContext/UserState"
 import UpdateUser from "./UpdateUser/UpdateUser"
 import UserInfo from "./UserInfo/UserInfo"
+import {UserOutlined} from "@ant-design/icons";
+import '../UserPage/Userpage.scss'
 
 const UserPage = () => {
 
@@ -21,14 +23,26 @@ const UserPage = () => {
 
   return (
     <main className="UserPage">
-        <h1>Soy la vista de usuario</h1>
-        {needUpdate?<UpdateUser/>:<UserInfo/>}
-        <button onClick={()=>{
-          changeNeedUpdate(!needUpdate)
-          changeIsUpdating(!isUpdating)
-          }}>{isUpdating?"Go back":"Update Yourself"}</button>
+      <h1>Your profile</h1>
+      <div className="profile-img">
+        <UserOutlined />
+      </div>
+      <div className="UserInfo-div">
+        {needUpdate ? <UpdateUser /> : <UserInfo />}
+      </div>
+      <div className="button-div">
+        <button
+          className="button"
+          onClick={() => {
+            changeNeedUpdate(!needUpdate);
+            changeIsUpdating(!isUpdating);
+          }}
+        >
+          {isUpdating ? "Go back" : "Update Yourself"}
+        </button>
+      </div>
     </main>
-  )
+  );
 }
 
 export default UserPage
