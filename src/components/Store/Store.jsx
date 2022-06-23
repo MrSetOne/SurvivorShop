@@ -1,6 +1,8 @@
 import { useContext, useEffect } from "react";
 import { ProductContext } from "../../context/ProductsContext/ProductState";
 import StoreItem from "./StoreItem/StoreItem";
+import Search from "./Search/Search";
+
 import "./Store.scss";
 
 const Store = () => {
@@ -22,6 +24,7 @@ const Store = () => {
   return (
     <main className="Store">
       <h1 className="title">Products</h1>
+      <Search />
       <div className="products">{result}</div>
     </main>
   );

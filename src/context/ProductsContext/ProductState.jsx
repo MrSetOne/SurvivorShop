@@ -43,6 +43,15 @@ const removeItem = (product) => {
   });
 }
 
+const searchBar = async (e) => {
+  const results =  await axios.get(`${API_URL}/products/name/${e}`);
+
+  dispatch({
+    type: "SEARCH_BAR",
+    payload: results.data
+  })
+}
+
   return (
     <ProductContext.Provider
       value={{
@@ -51,7 +60,8 @@ const removeItem = (product) => {
         getAllProducts,
         addCart,
         clearCart,
-        removeItem
+        removeItem,
+        searchBar
       }}
     >
       {children}

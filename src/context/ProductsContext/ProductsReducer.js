@@ -21,7 +21,11 @@ const products = (state, action) => {
                 ...state,
                 cart: [...state.cart]
             }
-                
+              case "SEARCH_BAR":
+            return {
+                ...state,
+                allProducts: action.payload
+            }
         default:
             return state;
 

@@ -78,3 +78,19 @@ h3 {
     font-size: 2rem;
   }
 }
+.search-bar{
+  display:inline;
+width:20%;
+height:50;
+float:left;
+padding:5;
+border:0.5px solid black;
+margin-bottom:10;
+margin-right:10;
+}
+.title-and-searchbar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
