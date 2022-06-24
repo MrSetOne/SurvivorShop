@@ -2,12 +2,15 @@ import { useContext } from "react";
 import { ProductContext } from "../../../context/ProductsContext/ProductState";
 
 const Search = () => {
-const { searchBar } = useContext(ProductContext);
+const { searchBar, getAllProducts } = useContext(ProductContext);
 
   const handleSearch = (event) => {
-    let value = event.target.value.toLowerCase();
-    console.log(value);
-    searchBar(value)
+    if(event.target.value.length === 0){
+      getAllProducts();
+    }else{
+      let value = event.target.value.toLowerCase();
+      searchBar(value)
+    }
   };
 
   return (
