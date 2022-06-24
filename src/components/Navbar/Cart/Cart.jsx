@@ -21,10 +21,8 @@ const Cart = () => {
   let total = 0
 
   cart.forEach(element => {
-    console.log(element);
     let toSum = element.price * element.amount
     total += toSum
-    console.log(total);
   });
   
   const createNewOrder = () => {
