@@ -6,6 +6,7 @@ const StoreItem = ({ item }) => {
 
   const tryToEntry = (item) =>{
     if(cart.some(cartItem => cartItem.id === item.id)){
+      console.log("Haz que no se añadan mas perro");
     }
     if(!cart.some(cartItem => cartItem.id === item.id)){
       addCart(item)
