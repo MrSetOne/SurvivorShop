@@ -35,27 +35,37 @@ export const ProductProvider = ({ children }) => {
       type: "CLEAR_CART",
     });
   };
-const removeItem = (product) => {
-  dispatch({
-    type: "REMOVE_ITEM",
-    payload: product
-  });
-}
+  const removeItem = (product) => {
+    dispatch({
+      type: "REMOVE_ITEM",
+      payload: product,
+    });
+  };
 
-const searchBar = async (e) => {
-  const results =  await axios.get(`${API_URL}/products/name/${e}`);
+  const searchBar = async (e) => {
+    const results = await axios.get(`${API_URL}/products/name/${e}`);
 
-  dispatch({
-    type: "SEARCH_BAR",
-    payload: results.data});
-  }
-  
-const updateAmount = (i, amount) =>{
-  dispatch({
-    type:"UPDATE__AMOUNT",
-    payload:{i,amount}
-  })
-}
+    dispatch({
+      type: "SEARCH_BAR",
+      payload: results.data,
+    });
+  };
+
+  const updateAmount = (i, amount) => {
+    dispatch({
+      type: "UPDATE__AMOUNT",
+      payload: { i, amount },
+    });
+  };
+
+  const showByPrice = async (order) => {
+    const result = await axios.get(`${API_URL}/products/order/${order}`);
+
+    dispatch({
+      type: "SHOW_BY_PRICE",
+      payload: result.data,
+    });
+  };
 
   return (
     <ProductContext.Provider
@@ -67,7 +77,8 @@ const updateAmount = (i, amount) =>{
         clearCart,
         removeItem,
         searchBar,
-        updateAmount
+        updateAmount,
+        showByPrice,
       }}
     >
       {children}

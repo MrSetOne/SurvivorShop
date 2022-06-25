@@ -34,6 +34,11 @@ const products = (state, action) => {
                 ...state,
                 allProducts: action.payload
             }
+            case "SHOW_BY_PRICE":
+                return {
+                    ...state,
+                    allProducts: action.payload
+                }
         default:
             return state;
     }
