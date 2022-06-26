@@ -23,7 +23,6 @@ const Store = () => {
 
   return (
     <main className="Store">
-      <h1 className="title">Products</h1>
       <Search />
       <div className="products">{result}</div>
     </main>

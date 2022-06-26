@@ -48,7 +48,7 @@ const handleByPrice = (order) => {
   })
 
   return (
-    <div className="title-and-searchbar">
+    <div className="searchAndFilter">
       <div className="searchBar">
         <SearchOutlined />
         <input
