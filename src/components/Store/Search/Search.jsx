@@ -9,7 +9,7 @@ const { Option } = Select;
 
 
 const Search = () => {
-const { searchBar, getAllProducts, showByPrice } = useContext(ProductContext);
+const { searchBar, getAllProducts, showByPrice, filterProducts } = useContext(ProductContext);
 const {getAllCategories, allCategories} = useContext(CategoriesContext)
 
 
@@ -32,13 +32,19 @@ const handleByPrice = (order) => {
     showByPrice(order)
   }
 
+  const handleByCategory = (category) =>{
+    if(category === "getAll"){
+      getAllProducts()
+    } else{
+      filterProducts(category)
+    }
+  }
 
 
 
 
   const categoriesOptions = allCategories.map(element=>{
     return (<Option value={element.id}>{element.name}</Option>)
-
   })
 
   return (
@@ -58,7 +64,9 @@ const handleByPrice = (order) => {
         <Option value="asc">Lowest to highest</Option>
         <Option value="desc">Highest to lowest</Option>
       </Select>
-      <Select defaultValue="Categories">
+      <Select defaultValue="Categories" onChange={(e)=> handleByCategory(e)}>
+        <Option disabled selected >Select a category</Option>
+        <Option value="getAll" >Get all</Option>
         {categoriesOptions}
       </Select>
     </div>
