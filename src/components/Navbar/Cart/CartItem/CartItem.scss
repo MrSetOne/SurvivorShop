@@ -24,4 +24,19 @@
     * {
         margin: 0;
     }
+    .amount__selector {
+        display: flex;
+        background-color: $mid-blue;
+        width: min-content;
+        padding: .3rem .6rem;
+        gap: .6rem;
+        border-radius: 2rem;
+        align-items: center;
+        box-shadow: inset 4px -9px 11px -8px #00000069;
+        p {
+            border-right: 1px solid $light;
+            border-left: 1px solid $light;
+            padding: 0 1rem;
+        }
+    }
 }

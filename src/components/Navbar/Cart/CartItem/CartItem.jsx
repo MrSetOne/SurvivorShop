@@ -1,4 +1,4 @@
-import { DeleteOutlined} from "@ant-design/icons"
+import { DeleteOutlined, CaretDownOutlined, CaretUpOutlined} from "@ant-design/icons"
 import { useContext, useEffect, useState } from "react";
 import { ProductContext } from "../../../../context/ProductsContext/ProductState";
 import './CartItem.scss'
@@ -7,8 +7,7 @@ const CartItem = (element) => {
   const { cart, clearCart, removeItem, updateAmount } = useContext(ProductContext);
   
 
-  const initialValue = element.cartItem.amount
-  const [amount, changeAmount] = useState(initialValue);
+  const [amount, changeAmount] = useState(element.cartItem.amount);
 
 
   useEffect(()=>{
@@ -26,10 +25,10 @@ const CartItem = (element) => {
         <div className="cart__item--info">
             <h2>{element.cartItem.name}</h2>
             <p>{element.cartItem.price.toFixed(2)} ₸</p>
-            <div>
-              <p onClick={()=>toChangeAmount()} >-</p>
+            <div className="amount__selector">
+              <CaretDownOutlined onClick={()=>toChangeAmount()}/>
               <p>{amount}</p>
-              <p onClick={()=>changeAmount(amount +1)} >+</p>
+              <CaretUpOutlined onClick={()=>changeAmount(amount +1)}/>
             </div>
         </div>
         <DeleteOutlined className="cart__item--trash" onClick={() => removeItem(element.i)} />
