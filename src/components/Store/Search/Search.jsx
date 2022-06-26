@@ -1,5 +1,11 @@
 import { useContext } from "react";
 import { ProductContext } from "../../../context/ProductsContext/ProductState";
+import { SearchOutlined} from "@ant-design/icons";
+import './Search.scss'
+import { Select } from 'antd';
+const { Option } = Select;
+
+
 
 const Search = () => {
 const { searchBar, getAllProducts, showByPrice } = useContext(ProductContext);
@@ -19,18 +25,21 @@ const handleByPrice = (order) => {
 
   return (
     <div className="title-and-searchbar">
-      <h3>Search for a product:</h3>
-      <input
-        type="text"
-        className="search-bar"
-        onChange={(event) => handleSearch(event)}
-      ></input>
-      <button onClick={() => handleByPrice("desc")} className="search-by-price">
-        Show by price (highest to lowest)
-      </button>
-      <button onClick={() => handleByPrice("asc")} className="search-by-price">
-        Show by price (lowest to highest)
-      </button>
+      <div className="searchBar">
+        <SearchOutlined />
+        <input
+          type="text"
+          className="search-bar"
+          onChange={(event) => handleSearch(event)}
+        ></input>
+      </div>
+      <Select defaultValue="Order by Price" onChange={(e)=> handleByPrice(e)}>
+        <Option value="disabled" disabled selected >
+          Order by Price
+        </Option>
+        <Option value="asc">Lowest to highest</Option>
+        <Option value="desc">Highest to lowest</Option>
+      </Select>
     </div>
   );
 };

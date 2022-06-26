@@ -4,7 +4,7 @@ import { ProductContext } from "../../../../context/ProductsContext/ProductState
 import './CartItem.scss'
 
 const CartItem = (element) => {
-  const { cart, clearCart, removeItem, updateAmount } = useContext(ProductContext);
+  const {  removeItem, updateAmount } = useContext(ProductContext);
   
 
   const [amount, changeAmount] = useState(element.cartItem.amount);
@@ -35,7 +35,5 @@ const CartItem = (element) => {
     </div>
   )
 }
-
-// return (cartItem);}
 
 export default CartItem
