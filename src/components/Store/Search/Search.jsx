@@ -1,14 +1,21 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ProductContext } from "../../../context/ProductsContext/ProductState";
 import { SearchOutlined} from "@ant-design/icons";
 import './Search.scss'
 import { Select } from 'antd';
+import { CategoriesContext } from "../../../context/CategoriesContext/CategoriesState";
 const { Option } = Select;
 
 
 
 const Search = () => {
 const { searchBar, getAllProducts, showByPrice } = useContext(ProductContext);
+const {getAllCategories, allCategories} = useContext(CategoriesContext)
+
+
+  useEffect(()=>{
+    getAllCategories();
+  },[])
 
   const handleSearch = (event) => {
     if(event.target.value.length === 0){
@@ -19,9 +26,20 @@ const { searchBar, getAllProducts, showByPrice } = useContext(ProductContext);
     }
   };
 
+  
+
 const handleByPrice = (order) => {
     showByPrice(order)
   }
+
+
+
+
+
+  const categoriesOptions = allCategories.map(element=>{
+    return (<Option value={element.id}>{element.name}</Option>)
+
+  })
 
   return (
     <div className="title-and-searchbar">
@@ -39,6 +57,9 @@ const handleByPrice = (order) => {
         </Option>
         <Option value="asc">Lowest to highest</Option>
         <Option value="desc">Highest to lowest</Option>
+      </Select>
+      <Select defaultValue="Categories">
+        {categoriesOptions}
       </Select>
     </div>
   );
