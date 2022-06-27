@@ -4,10 +4,13 @@ import { OrdersContext } from "../../../context/OrdersContext/OrderState";
 import { DeleteOutlined, ShoppingCartOutlined} from "@ant-design/icons"
 import './Cart.scss'
 import CartItem from "./CartItem/CartItem";
+import { UserContext } from "../../../context/UserContext/UserState";
 
 const Cart = () => {
   const { cart, clearCart, removeItem } = useContext(ProductContext);
   const { createOrder } = useContext(OrdersContext);
+  const { getUser} = useContext(UserContext)
+
 
   if (cart.length <= 0) {
     return (
@@ -25,9 +28,10 @@ const Cart = () => {
     total += toSum
   });
   
-  const createNewOrder = () => {
-    createOrder(cart);
-    clearCart();
+  const createNewOrder = async() => {
+    await createOrder(cart);
+    await clearCart();
+    await getUser();
   };
   
   const cartItems = cart.map((cartItem, i) => {
