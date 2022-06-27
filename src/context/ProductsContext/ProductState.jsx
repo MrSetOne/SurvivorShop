@@ -59,21 +59,26 @@ export const ProductProvider = ({ children }) => {
   };
 
   const showByPrice = async (order) => {
-    const result = await axios.get(`${API_URL}/products/order/${order}`);
-
     dispatch({
       type: "SHOW_BY_PRICE",
-      payload: result.data,
+      direction: order,
     });
   };
 
+<<<<<<< HEAD
   const filterProducts = async(id) =>{
     const result = await axios.get(`${API_URL}/categories/id/${id}`)
+=======
+  const filterProducts = async (id) => {
+    console.log(id);
+    const result = await axios.get(`${API_URL}/categories/id/${id}`);
+    console.log(result.data.Products);
+>>>>>>> develop
     dispatch({
       type: "FILTER_PRODUCTS",
       payload: result.data.Products,
     });
-  }
+  };
 
   return (
     <ProductContext.Provider
@@ -87,7 +92,7 @@ export const ProductProvider = ({ children }) => {
         searchBar,
         updateAmount,
         showByPrice,
-        filterProducts
+        filterProducts,
       }}
     >
       {children}

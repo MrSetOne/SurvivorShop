@@ -35,9 +35,16 @@ const products = (state, action) => {
                 allProducts: action.payload
             }
         case "SHOW_BY_PRICE":
+            let prices
+            if (action.direction === "asc") {
+                prices = state.allProducts.sort((a, b) => (a.price > b.price) ? 1 : -1)
+            } else {
+                prices = state.allProducts.sort((a, b) => (a.price > b.price) ? -1 : 1)
+            }
+
             return {
                 ...state,
-                allProducts: action.payload
+                allProducts: prices
             }
         case "FILTER_PRODUCTS":
             return {
