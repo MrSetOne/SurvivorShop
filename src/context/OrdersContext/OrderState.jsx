@@ -9,7 +9,6 @@ export const OrdersContext = createContext();
 export const OrdersProvider = ({ children }) => {
   const createOrder = async (order) => {
     const token = JSON.parse(localStorage.getItem("token"));
-
     try {
       await axios.post(
         API_URL + "/orders",
@@ -26,10 +25,29 @@ export const OrdersProvider = ({ children }) => {
       console.error(error);
     }
   };
+
+  const makeAPaid = async(id) =>{
+    try {
+      const token = JSON.parse(localStorage.getItem("token"));
+      await axios.put(`${API_URL}/orders/id/${id}`,
+        { paid: true },
+        {
+          headers: {
+            authorization: token,
+          },
+        }
+      );
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+
   return (
     <OrdersContext.Provider
       value={{
         createOrder,
+        makeAPaid
       }}
     >
       {children}

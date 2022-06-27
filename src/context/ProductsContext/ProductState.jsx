@@ -65,10 +65,8 @@ export const ProductProvider = ({ children }) => {
     });
   };
 
-  const filterProducts = async (id) => {
-    console.log(id);
-    const result = await axios.get(`${API_URL}/categories/id/${id}`);
-    console.log(result.data.Products);
+  const filterProducts = async(id) =>{
+    const result = await axios.get(`${API_URL}/categories/id/${id}`)
     dispatch({
       type: "FILTER_PRODUCTS",
       payload: result.data.Products,

@@ -27,6 +27,7 @@ const users = (state, action) => {
                 user: {...action.payload.userUpdated }
             };
         case "GET_USER":
+            action.payload.Orders.sort((a, b) => (a.updatedAt > b.updatedAt) ? -1 : 1)
             return {
                 ...state,
                 user: action.payload

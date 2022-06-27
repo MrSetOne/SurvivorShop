@@ -1,0 +1,33 @@
+.OrdersItem {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .3rem 1rem;
+    gap: 2rem;
+    margin-bottom: 1rem;
+    h2 {
+        font-size: 2rem;
+    }
+    .OrdersItem__Count {
+        flex: 1;
+        opacity: .5;
+        font-weight: 700;
+    }
+    .OrdersItem__pay {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .OrdersItem__paidInfo {
+            background-color: black;
+            color: white;
+            font-size: 1.5rem;
+            padding: 0 1rem;
+            border-radius: 2rem;
+            opacity: .5;
+        }
+        .OrdersItem__paidInfo--unPaid {
+            cursor: pointer;
+        }
+    }
+}
