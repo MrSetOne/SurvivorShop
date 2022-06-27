@@ -1,16 +1,22 @@
 import { useContext, useEffect } from "react";
 import { UserContext } from "../../../context/UserContext/UserState";
 import { Form, Input, Button } from "antd";
+import { useNavigate } from "react-router-dom";
 import '../UpdateUser/UpdateUser.scss';
 
 
 
 const UpdateUser = () => {
     const {user, updateUser} = useContext(UserContext)
-    const onFinish = (values) => {
-      updateUser(values)
-    }
     
+    const navigate = useNavigate()
+
+    const onFinish = (values) => {
+      console.log("se ejecuta");
+      updateUser(values)
+      navigate("/")
+    }
+
     const onFinishFailed = (errorInfo) => {
       console.log("Failed:", errorInfo);
     };

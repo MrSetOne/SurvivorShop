@@ -22,6 +22,7 @@ const users = (state, action) => {
                 username: null
             };
         case "UPDATE_USER":
+            action.payload.userUpdated.Orders = state.user.Orders
             return {
                 ...state,
                 user: {...action.payload.userUpdated }
