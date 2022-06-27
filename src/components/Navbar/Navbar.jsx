@@ -8,7 +8,7 @@ import Cart from './Cart/Cart'
 
 
 const Navbar = () => {
-const { token, logout , user, getUser, username} = useContext(UserContext);
+const { token, logout , username} = useContext(UserContext);
 const navigate = useNavigate()
 
 const initialValue = false
