@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { UserContext } from "../../../context/UserContext/UserState";
-import { Form, Input, Button } from "antd";
+import { Form, Input, Button, notification } from "antd";
 import { useNavigate } from "react-router-dom";
 import './Login.scss'
 
@@ -12,6 +12,7 @@ const Login = () => {
 
   const onFinish = (values) => {
     login(values);
+    openNotification()
     setTimeout(() => {
       navigate("/")
     }, 3000);
@@ -20,6 +21,16 @@ const Login = () => {
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
+
+const openNotification = () => {
+  notification.open({
+    message: "Congratulations, you have logged in correctly",
+    description: "Now, you will be redirected to the home page.",
+    onClick: () => {
+      console.log("Notification Clicked!");
+    },
+  });
+};
 
   return (
     <div className="form__container">
