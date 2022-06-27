@@ -14,7 +14,7 @@ const Login = () => {
     login(values);
     openNotification()
     setTimeout(() => {
-      navigate("/")
+      navigate("/store")
     }, 3000);
   };
 
@@ -25,7 +25,7 @@ const Login = () => {
 const openNotification = () => {
   notification.open({
     message: "Congratulations, you have logged in correctly",
-    description: "Now, you will be redirected to the home page.",
+    description: "Now, you will be redirected to the store page.",
     onClick: () => {
       console.log("Notification Clicked!");
     },

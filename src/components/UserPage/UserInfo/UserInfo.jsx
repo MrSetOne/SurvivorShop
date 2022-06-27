@@ -12,7 +12,6 @@ const UserInfo = () => {
     return(<h1>Cargando...</h1>)
   }
   
-  // console.log(user.Orders);
   const orders = user.Orders.map((element, i)=>{
       return <OrdersItems element={element} i={i}/>
     })
