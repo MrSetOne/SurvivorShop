@@ -23,9 +23,9 @@ const OrdersItems = (element) => {
     const billInfo = element.element.Products.map(item => {
       console.log(item);
       return(
-        <li style={{display:"flex",justifyContent:"space-between",borderBottom:"1px solid red"}}>
-          <p style={{margin:0}}>{item.name} x {item.ProductOrders.amount}</p>
-          <p style={{margin:0}}>{(item.ProductOrders.amount * item.price).toFixed(2) } ₸</p>
+        <li className="Modal__item">
+          <p>{item.name} x {item.ProductOrders.amount}</p>
+          <p>{(item.ProductOrders.amount * item.price).toFixed(2) } ₸</p>
         </li>
       )
     })
@@ -53,6 +53,7 @@ const OrdersItems = (element) => {
             </div>
         </div>
         <Modal
+        className="Modal"
         visible={modalVisible}
         title="Would you like to finalize your order?"
         onOk={()=>preMakeAPaid(element.element.id)}
@@ -66,10 +67,10 @@ const OrdersItems = (element) => {
           </Button>,
         ]}
       >
-        <ol>
+        <ol className="Modal__items">
         {billInfo}
         </ol>
-        <div style={{display:"flex",justifyContent:"space-between"}} >
+        <div className="Modal__total" >
           <h2>Total</h2>
           <h2>{totalPrice.toFixed(2)} ₸</h2>
         </div>

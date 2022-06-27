@@ -31,3 +31,21 @@
         }
     }
 }
+
+.Modal {
+    .Modal__items {
+        .Modal__item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid gray;
+            padding: .3rem;
+            p {
+                margin: 0;
+            }
+        }
+    }
+    .Modal__total {
+        display: flex;
+        justify-content: space-between;
+    }
+}
