@@ -3,15 +3,26 @@ import { Link } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../../context/UserContext/UserState";
 import {UserOutlined, LogoutOutlined, ShoppingCartOutlined, CloseOutlined} from "@ant-design/icons"
+import { Badge } from 'antd';
 import { useNavigate } from "react-router-dom";
 import Cart from './Cart/Cart'
+import { ProductContext } from "../../context/ProductsContext/ProductState";
 
 
 const Navbar = () => {
 const { token, logout , username} = useContext(UserContext);
+const {cart} = useContext(ProductContext)
 const navigate = useNavigate()
 
 const initialValue = false
+
+console.log(cart)
+
+let totalArticles = 0
+
+cart.forEach(item => {
+  totalArticles += item.amount
+});
 
 const [burgerOn, setBurgerOn] = useState(initialValue)
 
@@ -28,7 +39,9 @@ const [burgerOn, setBurgerOn] = useState(initialValue)
           <div className="links">
             {token?
             <div className="navigate">
-              <ShoppingCartOutlined onClick={()=>setBurgerOn(true)}/>
+              <Badge key="CartBadge" count={totalArticles}>
+                <ShoppingCartOutlined onClick={()=>setBurgerOn(true)}/>
+              </Badge>
               <Link to="/user">
                 <div className="user__icon">
                   <p>{username.charAt(0)}</p>

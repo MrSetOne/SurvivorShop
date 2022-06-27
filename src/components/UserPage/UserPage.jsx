@@ -18,7 +18,8 @@ const UserPage = () => {
   const [isUpdating, changeIsUpdating] = useState(initialValue.isUpdating)
   
   useEffect(()=>{
-    getUser()
+    getUser();
+    window.scrollTo(0,0)
   },[])
 
   return (
