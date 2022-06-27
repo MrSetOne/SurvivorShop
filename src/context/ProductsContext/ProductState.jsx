@@ -3,15 +3,6 @@ import axios from "axios";
 import ProductsReducer from "./ProductsReducer";
 import { notification } from "antd";
 
-const openNotification = () => {
-  notification.open({
-    message: "Did you change your mind? ",
-    description: "You have cleared your cart successfully",
-    onClick: () => {
-      console.log("Notification Clicked!");
-    },
-  });
-};
 const cart = JSON.parse(localStorage.getItem("cart"));
 
 const initialState = {
@@ -41,7 +32,6 @@ export const ProductProvider = ({ children }) => {
     });
   };
   const clearCart = () => {
-    openNotification()
     dispatch({
       type: "CLEAR_CART",
     });

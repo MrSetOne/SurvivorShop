@@ -14,8 +14,26 @@ const Cart = () => {
   const { cart, clearCart, removeItem} = useContext(ProductContext);
   const { createOrder } = useContext(OrdersContext);
   const { getUser} = useContext(UserContext)
-
+  
   const navigate = useNavigate()
+
+  const currentNotification = ({message, description}) => {
+    notification.open({
+      message,description
+    });
+  };
+
+  const notifications = {
+    buy:{
+      message:"Congratulations, you have completed your order",
+      description:"Good luck with the zombies"
+    },
+    delete:{
+      message:"Did you change your mind?",
+      description:"You have cleared your cart successfully"
+    }
+  }
+
 
   if (cart.length <= 0) {
     return (
@@ -35,22 +53,13 @@ const Cart = () => {
   
   const createNewOrder = async() => {
     await createOrder(cart);
-    await openNotification()
+    await currentNotification(notifications.buy)
     await clearCart();
     await getUser();
     navigate("/user")
 
   };
   
-const openNotification = () => {
-  notification.open({
-    message: "Congratulations, you have completed your order",
-    description: "Good luck with the zombies",
-    onClick: () => {
-      console.log("Notification Clicked!");
-    },
-  });
-};
 
   const cartItems = cart.map((cartItem, i) => {
     return (
@@ -64,7 +73,7 @@ const openNotification = () => {
       <h2>Total: {total.toFixed(2)}</h2>
       <div className="cart__btns">
         <button onClick={() => createNewOrder()}>Create Order</button>
-        <button onClick={() => clearCart()}>Clear cart</button>
+        <button onClick={() => {clearCart();currentNotification(notifications.delete)}}>Clear cart</button>
       </div>
     </div>
   );
