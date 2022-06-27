@@ -5,12 +5,15 @@ import { DeleteOutlined, ShoppingCartOutlined} from "@ant-design/icons"
 import './Cart.scss'
 import CartItem from "./CartItem/CartItem";
 import { UserContext } from "../../../context/UserContext/UserState";
+import { useNavigate } from "react-router-dom";
+
 
 const Cart = () => {
   const { cart, clearCart, removeItem } = useContext(ProductContext);
   const { createOrder } = useContext(OrdersContext);
   const { getUser} = useContext(UserContext)
 
+  const navigate = useNavigate()
 
   if (cart.length <= 0) {
     return (
@@ -32,6 +35,7 @@ const Cart = () => {
     await createOrder(cart);
     await clearCart();
     await getUser();
+    navigate("/user")
   };
   
   const cartItems = cart.map((cartItem, i) => {
