@@ -1,24 +1,22 @@
-@import '../../../colors.scss';
+@import "../../../colors.scss";
 .searchAndFilter {
-    position: sticky;
-    top: 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  .searchBar {
+    background-color: white;
     display: flex;
+    width: 20rem;
     align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    .searchBar {
-        background-color: white;
-        display: flex;
-        width: 20rem;
-        align-items: center;
-        padding: .3rem;
-        border-radius: 25rem;
-        input {
-            outline: none;
-            border: none;
-            flex: 1;
-            padding: 0 1rem;
-            background-color: transparent;
-        }
+    padding: 0.3rem;
+    border-radius: 25rem;
+    input {
+      outline: none;
+      border: none;
+      flex: 1;
+      padding: 0 1rem;
+      background-color: transparent;
     }
+  }
 }

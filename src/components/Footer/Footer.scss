@@ -1,0 +1,26 @@
+@import "../../colors.scss";
+@import "../../fonts.scss";
+
+.copy {
+  color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  font-size: 20px;
+  background-color: $green;
+  font-family: $impact-font;
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1rem;
+  gap: 2rem;
+  * {
+    color: $green;
+    font-size: 35px;
+  }
+}
