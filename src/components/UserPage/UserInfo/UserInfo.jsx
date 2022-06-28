@@ -5,9 +5,6 @@ import OrdersItems from "./OrdersItems/OrdersItems"
 const UserInfo = () => {
   const {user, getUser} = useContext(UserContext)
   
-  
-  
-  
   if(!user){
     return(<h1>Cargando...</h1>)
   }

@@ -7,7 +7,6 @@ import './Login.scss'
 
 const Login = () => {
   const { login } = useContext(UserContext);
-
   const navigate = useNavigate()
 
   const onFinish = (values) => {
@@ -26,9 +25,6 @@ const openNotification = () => {
   notification.open({
     message: "Congratulations, you have logged in correctly",
     description: "Now, you will be redirected to the store page.",
-    onClick: () => {
-      console.log("Notification Clicked!");
-    },
   });
 };
 

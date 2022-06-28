@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { ProductContext } from "../../../context/ProductsContext/ProductState";
 import { OrdersContext } from "../../../context/OrdersContext/OrderState";
-import { DeleteOutlined, ShoppingCartOutlined } from "@ant-design/icons"
+import { ShoppingCartOutlined } from "@ant-design/icons"
 import { notification } from "antd";
 
 import './Cart.scss'
@@ -34,7 +34,6 @@ const Cart = () => {
     }
   }
 
-
   if (cart.length <= 0) {
     return (
       <div className="Empty__cart">
@@ -60,7 +59,6 @@ const Cart = () => {
 
   };
   
-
   const cartItems = cart.map((cartItem, i) => {
     return (
       <CartItem cartItem={cartItem} i={i}/>

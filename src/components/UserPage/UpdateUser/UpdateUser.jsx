@@ -8,11 +8,9 @@ import '../UpdateUser/UpdateUser.scss';
 
 const UpdateUser = () => {
     const {user, updateUser} = useContext(UserContext)
-    
     const navigate = useNavigate()
 
     const onFinish = (values) => {
-      console.log("se ejecuta");
       updateUser(values)
       navigate("/")
     }

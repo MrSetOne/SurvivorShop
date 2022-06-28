@@ -12,7 +12,6 @@ const OrdersItems = (element) => {
 
   const [modalVisible, setModalVisible] = useState(false);
   
-
     let totalPrice = 0
     let totalProducts = 0
 
@@ -21,7 +20,6 @@ const OrdersItems = (element) => {
     element.element.Products.forEach(item =>totalProducts += item.ProductOrders.amount)
 
     const billInfo = element.element.Products.map(item => {
-      console.log(item);
       return(
         <li className="Modal__item">
           <p>{item.name} x {item.ProductOrders.amount}</p>

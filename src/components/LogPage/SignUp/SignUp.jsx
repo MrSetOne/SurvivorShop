@@ -7,7 +7,6 @@ import './SignUp.scss'
 
 const SignUp = () => {
   const { signUp } = useContext(UserContext);
-
   const navigate = useNavigate();
 
   const onFinish = (values) => {
@@ -27,9 +26,6 @@ const openNotification = () => {
     message: "Congratulations, you have signed up correctly",
     description:
       "Now you will be redirected to the home page.",
-    onClick: () => {
-      console.log("Notification Clicked!");
-    },
   });
 };
 

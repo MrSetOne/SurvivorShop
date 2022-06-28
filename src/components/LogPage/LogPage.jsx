@@ -5,8 +5,7 @@ import './LogPage.scss'
 
 const LogPage = () => {
 
-    const initialValue = false
-
+    const initialValue = false;
     const [needSignUp, changeNeedSignUp] = useState(initialValue);
 
   return (

@@ -7,8 +7,11 @@ const API_URL = "http://localhost:8080";
 export const OrdersContext = createContext();
 
 export const OrdersProvider = ({ children }) => {
+
   const createOrder = async (order) => {
+  
     const token = JSON.parse(localStorage.getItem("token"));
+  
     try {
       await axios.post(
         API_URL + "/orders",
@@ -41,7 +44,6 @@ export const OrdersProvider = ({ children }) => {
       console.error(error);
     }
   }
-
 
   return (
     <OrdersContext.Provider

@@ -15,9 +15,6 @@ const {cart} = useContext(ProductContext)
 const navigate = useNavigate()
 
 const initialValue = false
-
-console.log(cart)
-
 let totalArticles = 0
 
 cart.forEach(item => {

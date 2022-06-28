@@ -5,8 +5,6 @@ const Footer = () => {
   return (
     <footer className="Footer">
       <div className="logos">
-        
-
         <a href="https://www.facebook.com" target="_blank">
           <FacebookOutlined />
         </a>

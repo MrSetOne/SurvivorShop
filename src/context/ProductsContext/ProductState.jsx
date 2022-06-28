@@ -1,7 +1,6 @@
 import React, { createContext, useReducer } from "react";
 import axios from "axios";
 import ProductsReducer from "./ProductsReducer";
-import { notification } from "antd";
 
 const cart = JSON.parse(localStorage.getItem("cart"));
 
@@ -45,7 +44,6 @@ export const ProductProvider = ({ children }) => {
 
   const searchBar = async (e) => {
     const results = await axios.get(`${API_URL}/products/name/${e}`);
-
     dispatch({
       type: "SEARCH_BAR",
       payload: results.data,
