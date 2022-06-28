@@ -1,7 +1,6 @@
+ #  <center>:hocho:SURVIVOR-SHOP:gun:</center> 
 
- #  <center>SURVIVOR-STORE</center> 
-
- ## :bookmark: Indice 
+ ## :clipboard: Indice 
 
  - [Sobre el proyecto](#sobre-el-proyecto)
 
@@ -31,9 +30,9 @@
 
 - [Autores](#autores)
 
-# Sobre el proyecto
+# :page_facing_up: Sobre el proyecto
 
-## Instalación y despliegue
+## :rocket: Instalación y despliegue
 
 - BackEnd
 
@@ -75,7 +74,7 @@
 
     3. Dentro de la carpeta clonada de ["SurvivorShop"](https://github.com/MrSetOne/SurvivorShop) tienes que ejecutar el comando `npm start`
 
-## Tecnologías utilizadas
+## :wrench: Tecnologías utilizadas
 
 ```JavaScript
 const project = {
@@ -102,13 +101,13 @@ const project = {
 } 
 ```
 
-## Origen
+## :mag: Origen
 
 ![TheBridge](./toReadme/thebridgelogo.svg)
 
 El proyecto se origina en el BootCamp de FullStack en [TheBridge](https://www.thebridge.tech/), consiste en otorgar de frontEnd a un proyecto de backEnd anterior, consiguiendo así un proyecto Full-Stack. El objetivo principal es crear un e-commerce SPA (Single Page Application) funcional, usando Hooks y contexts.
 
-## Concepto e inspiración
+## :black_nib: Concepto e inspiración
 
 La idea fue realizar una tienda online en un apocalipsis zombie, donde puedes comprar todo lo necesario para sobrevivir o al menos intentarlo... Algunos productos están puestos de forma cómica, como por ejemplo "Zombie high heels" (¡Estás invitado a encontrarlo con nuestro buscador :D!), los precios están en Tenge kazajo (moneda de Kazajistán) y no hay envío, tu te las apañas para ir a recoger los artículos (Si sobrevives a los zombies :D)
 
@@ -121,14 +120,14 @@ La idea fue realizar una tienda online en un apocalipsis zombie, donde puedes co
 ### Pedidos y pago
 ![Pedidos y pago](./toReadme/Screenshot_3.png)
 
-## Organización
+## :clipboard: Organización
 
 Para organizar las tareas hemos utilizado el aplicativo [Trello](https://trello.com/) con el que se puede gestionar cómodamente las tareas y "Tickets"
 
 ### Captura del Trello
 ![Captura del Trello](./toReadme/Trello.png)
 
-# Retos presentados
+# :bomb: Retos presentados
 
 ## Nombre en el Navbar
 ![NavBar](./toReadme/NavBar_Screenshot.png)
@@ -158,14 +157,17 @@ En un primer lugar tratamos de que las cantidades se manejaran con un estado loc
 
 ## Buscador de productos
 
-¡¡¡ ESPERANDO A ALEX !!!
+Para esto creamos junto a la barra de busqueda un select para ver los producto de mas caros a mas baratos y viceversa. Originalmente usabamos la llamada a la API que nos devolvia los valores ordenados, el problema es que si filtrabamos por nombre o categoria destrozaba este filtro y nos devolvia todos los productos, para solucionar esto hemos hecho el filtrado directamente sobre el array de productos y hemos utilizado el metodo `.sort`.
 
 
-# Agradecimientos
+originally we used the API, but we realized that when combined with the category filter there was a bug. To solve this we removed the api and used a .sort() method. This is a good fix for when you only have a small amount of products, but if we were to have a thousands of products, the .sort method would take a long time to load all of the products.
+
+
+# :green_heart: Agradecimientos
 
 Agradecer a nuestros profesores [Sofia](https://github.com/SofiaPinilla) [Germán](https://github.com/GeerDev) e [Ivan](https://github.com/ivanpuebla10) por enseñarnos a usar React y su paciencia con nosotros. También agradecer a todos mis compañeros del BootCamp por siempre estar ahí para aportar soluciones o simplemente un punto de vista critico.
 
-# En el tintero
+# :pencil2: En el tintero
 
 - Implementar imagen de perfil.
 
@@ -179,6 +181,6 @@ Agradecer a nuestros profesores [Sofia](https://github.com/SofiaPinilla) [Germá
 
 # Autores
 
-### [Michael L. Sánchez](https://github.com/MrSetOne)
+### :point_right: [Michael L. Sánchez](https://github.com/MrSetOne) :point_left:
 
-### [Alex Tebbitt](https://github.com/alextebbitt)
+### :point_right: [Alex Tebbitt](https://github.com/alextebbitt) :point_left:

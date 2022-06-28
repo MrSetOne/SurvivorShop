@@ -1,36 +1,40 @@
- #  <center>SURVIVOR-STORE</center> 
+ #  <center>:hocho:SURVIVOR-SHOP:gun:</center> 
 
- ## :bookmark: Index 
+ ## :clipboard: Index 
 
- - [About the project](#)
+ - [About the project](#about-the-project)
 
-    - [Installation and deployment](#)
+    - [Installation and deployment](#installation-and-deployment)
 
-    - [Technologies used](#)
+    - [Technologies used](#technologies-used)
 
-    - [Source](#)
+    - [Source](#source)
 
-    - [Objectives](#)
+    - [Concept and inspiration](#concept-and-inspiration)
 
-    - [Concept and inspiration](#)
+    - [Organization](#organization)
 
-- [Challenges presented](#)
+- [Challenges presented](#challenges-presented)
 
-    - [XXXXXXXXXX](#)
+    - [Name in the Navbar](#name-in-the-navbar)
 
-    - [XXXXXXXXXX](#)
+    - [Category filter](#category-filter)
 
-- [Acknowledgment](#)
+    - [Amount in the cart](#amount-in-the-cart)
 
-- [Things we would have liked to have added](#)
+    - [Product searchbar/filters](#product-searchbarfilters)
 
-- [Authors](#)
+- [Acknowledgment](#acknowledgment)
 
-## About the project
+- [Things we would have liked to have added](#things-we-would-have-liked-to-have-added)
+
+- [Authors](#authors)
+
+## :page_facing_up: About the project
 
 This project unifies everything learned so far. We will develop an e-commerce where users will register, login, view products and create orders using the e-commerce API we created in the 1st Backend Project.
 
-## Installation and deployment
+## :rocket: Installation and deployment
 
 BackEnd
 
@@ -72,7 +76,7 @@ BackEnd
 
     3. Inside the cloned folder of ["SurvivorShop"](https://github.com/MrSetOne/SurvivorShop) you have to run the command `npm start`
 
-## Technologies used
+## :wrench: Technologies used
 
 ```JavaScript
 const project = {
@@ -98,13 +102,13 @@ const project = {
     }
 } 
 ```
- ## Source
+ ## :mag: Source
 
 ![TheBridge](./toReadme/thebridgelogo.svg)
 
 The project originates from the FullStack bootcamp at [TheBridge](https://www.thebridge.tech/), It consists of transferring the frontend to a previous backend project, thus achieving a Full-Stack project. The main objective is to create a functional e-commerce SPA (Single Page Application), using Hooks and Contexts.
 
-## Concept and inspiration
+## :black_nib: Concept and inspiration
 
 The idea was to make an online store in a zombie apocalypse, where you can buy everything you need to survive or at least try... Some products are placed in a comical way, such as "Zombie high heels" (You are invited to find it with our search engine :D!) The prices are in Kazakh Tenge (Kazakhstan's currency) and there is no shipping, you need to pick up the items (If you survive the zombies :D)
 
@@ -117,7 +121,7 @@ The idea was to make an online store in a zombie apocalypse, where you can buy e
 ### Orders and payments
 ![Orders and payments](./toReadme/Screenshot_3.png)
 
-## Organization
+## :clipboard: Organization
 
 To organize the tasks we have used the application [Trello](https://trello.com/) with which you can comfortably manage tasks and "Tickets"
 
@@ -125,9 +129,9 @@ To organize the tasks we have used the application [Trello](https://trello.com/)
 ![Screenshot of Trello](./toReadme/Trello.png)
 
 
-## Challenges presented
+# :bomb: Challenges presented
 
-# Name in the Navbar
+## Name in the Navbar
 
 ![NavBar](./toReadme/NavBar_Screenshot.png)
 
@@ -161,11 +165,11 @@ In the first place we tried to have the amounts handled with a local state of th
 For this we created a filter next to the search bar for the most expensive products to the least expensive and vice versa. originally we used the API, but we realized that when combined with the category filter there was a bug. To solve this we removed the api and used a .sort() method. This is a good fix for when you only have a small amount of products, but if we were to have a thousands of products, the .sort method would take a long time to load all of the products. 
 
 
-## Acknowledgment
+# :green_heart: Acknowledgment
 
 We would like to thank our teachers [Sofia](https://github.com/SofiaPinilla) [Germán](https://github.com/GeerDev) and [Ivan](https://github.com/ivanpuebla10) for teaching us React and for their pacience with us. We would also like to thank all of our classmates from the Bootcamp for always being there to help us resolve problems or simply for giving us some constructive critism.
 
-## Things we would have liked to have added
+# :pencil2: Things we would have liked to have added
 
 - Implement profile image.
 
@@ -178,8 +182,8 @@ We would like to thank our teachers [Sofia](https://github.com/SofiaPinilla) [Ge
 - Comment system
 
 
-## Authors
+# Authors
 
-### [Michael L. Sánchez](https://github.com/MrSetOne)
+### :point_right: [Michael L. Sánchez](https://github.com/MrSetOne) :point_left:
 
-### [Alex Tebbitt](https://github.com/alextebbitt)
+### :point_right: [Alex Tebbitt](https://github.com/alextebbitt) :point_left:
