@@ -40,7 +40,7 @@
     3. Es necesario tener instalado de forma global el CLI de Sequelize, para ello introduce en la terminal `npm i sequelize-cli -g`
 
     4. Dentro de la carpeta config, debes copiarte el archivo llamado `config.example.json` y nombrarlo `config.json`, dentro tienes que introducir la siguiente información:
-    
+
 ```JSON
 {
     "development": {
@@ -62,3 +62,40 @@
     5. Una vez introducida la informacion hay que levantar la base de datos con la siguiente secuencia `sequelize db:create` `sequelize db:migrate` `sequelize db:seed:all` 
 
     6. Dentro de la carpeta clonada de ["Frikishop"](https://github.com/MrSetOne/Frikishop.git) tienes que ejecutar el comando `npm start`
+
+- FrontEnd
+
+    1. Descargar el repositorio de ["SurvivorShop"](https://github.com/MrSetOne/SurvivorShop) usando `git clone https://github.com/MrSetOne/SurvivorShop.git` desde la terminal en la carpeta que desees.
+
+    2. Una vez clonado el respositorio hay que instalar todos los paquetes que necesita el proyecto con `npm i`
+
+    3. Dentro de la carpeta clonada de ["SurvivorShop"](https://github.com/MrSetOne/SurvivorShop) tienes que ejecutar el comando `npm start`
+
+## Tecnologías utilizadas
+
+```JavaScript
+const project = {
+    frontEnd:{
+        main:["JavaScript","React","sass"],
+        modules:[
+            "react-router-dom",
+            "antd",
+            "@ant-design/icons",
+            "axios",
+            "normalize.css"
+        ]
+    },
+    backEnd:{
+        main:["JavaScript","MySQL","NodeJS","Express","Sequelize"],
+        modules:[
+            "Nodemailer",
+            "Bcrypt",
+            "Jsonwebtoken",
+            "Multer",
+            "Postman"
+        ]
+    }
+} 
+```
+
+
