@@ -11,7 +11,9 @@
 
     - [Origen](#origen)
 
-    - [Concepto e inspiración](#)
+    - [Concepto e inspiración](#concepto-e-inspiración)
+
+    -[Organizacion](#)
 
 - [Retos presentados](#)
 
@@ -115,3 +117,11 @@ La idea fue realizar una tienda online en un apocalipsis zombie, donde puedes co
 ### Pedidos y pago
 ![Pedidos y pago](./toReadme/Screenshot_3.png)
 
+## Organizacion
+
+Para organizar las tareas hemos utilizado el aplicativo [Trello](https://trello.com/) con el que se puede gestionar comodamente las tareas y "Tickets"
+
+### Captura del Trello
+![Captura del Trello](./toReadme/Trello.png)
+
+# Retos presentados
