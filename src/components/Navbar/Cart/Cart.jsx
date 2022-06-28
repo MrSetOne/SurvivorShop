@@ -10,7 +10,7 @@ import { UserContext } from "../../../context/UserContext/UserState";
 import { useNavigate } from "react-router-dom";
 
 
-const Cart = () => {
+const Cart = ({setBurgerOn}) => {
   const { cart, clearCart, removeItem} = useContext(ProductContext);
   const { createOrder } = useContext(OrdersContext);
   const { getUser} = useContext(UserContext)
@@ -55,6 +55,7 @@ const Cart = () => {
     await currentNotification(notifications.buy)
     await clearCart();
     await getUser();
+    setBurgerOn(false);
     navigate("/user")
 
   };

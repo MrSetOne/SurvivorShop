@@ -57,7 +57,7 @@ const [burgerOn, setBurgerOn] = useState(initialValue)
       </div>
       <div className={burgerOn?"Cart Cart--on":"Cart"}>
         <CloseOutlined className="Menu__x" onClick={()=>setBurgerOn(false)}/>
-        <Cart/>
+        <Cart setBurgerOn={setBurgerOn}/>
       </div>
     </>
   );
