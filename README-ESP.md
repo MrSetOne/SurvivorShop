@@ -13,7 +13,7 @@
 
     - [Concepto e inspiración](#concepto-e-inspiración)
 
-    - [Organizacion](#organizacion)
+    - [Organización](#organizaci%C3%B3n)
 
 - [Retos presentados](#retos-presentados)
 
@@ -39,7 +39,7 @@
 
     1. Descargar el repositorio de ["Frikishop"](https://github.com/MrSetOne/Frikishop.git) usando `git clone https://github.com/MrSetOne/Frikishop.git` desde la terminal en la carpeta que desees.
 
-    2. Una vez clonado el respositorio hay que instalar todos los paquetes que necesita el proyecto con `npm i` 
+    2. Una vez clonado el repositorio hay que instalar todos los paquetes que necesita el proyecto con `npm i` 
 
     3. Es necesario tener instalado de forma global el CLI de Sequelize, para ello introduce en la terminal `npm i sequelize-cli -g`
 
@@ -63,7 +63,7 @@
 }
 ```
 
-    5. Una vez introducida la informacion hay que levantar la base de datos con la siguiente secuencia `sequelize db:create` `sequelize db:migrate` `sequelize db:seed:all` 
+    5. Una vez introducida la información hay que levantar la base de datos con la siguiente secuencia `sequelize db:create` `sequelize db:migrate` `sequelize db:seed:all` 
 
     6. Dentro de la carpeta clonada de ["Frikishop"](https://github.com/MrSetOne/Frikishop.git) tienes que ejecutar el comando `npm start`
 
@@ -71,7 +71,7 @@
 
     1. Descargar el repositorio de ["SurvivorShop"](https://github.com/MrSetOne/SurvivorShop) usando `git clone https://github.com/MrSetOne/SurvivorShop.git` desde la terminal en la carpeta que desees.
 
-    2. Una vez clonado el respositorio hay que instalar todos los paquetes que necesita el proyecto con `npm i`
+    2. Una vez clonado el repositorio hay que instalar todos los paquetes que necesita el proyecto con `npm i`
 
     3. Dentro de la carpeta clonada de ["SurvivorShop"](https://github.com/MrSetOne/SurvivorShop) tienes que ejecutar el comando `npm start`
 
@@ -106,14 +106,14 @@ const project = {
 
 ![TheBridge](./toReadme/thebridgelogo.svg)
 
-El proyecto se origina en el bootcam de FullStack en [TheBridge](https://www.thebridge.tech/), consiste en otrogar de frontEnd a un proyecto de backEnd anterior, consiguiendo así un proyecto Full-Stack. El objetivo principal es crear un e-comerce SPA (Single Page Aplication) funcional, usando Hooks y contexts.
+El proyecto se origina en el BootCamp de FullStack en [TheBridge](https://www.thebridge.tech/), consiste en otorgar de frontEnd a un proyecto de backEnd anterior, consiguiendo así un proyecto Full-Stack. El objetivo principal es crear un e-commerce SPA (Single Page Application) funcional, usando Hooks y contexts.
 
 ## Concepto e inspiración
 
-La idea fue realizar una tienda online en un apocalipsis zombie, donde puedes comprar todo lo necesario para sobrevivir o al menos intenterlo... Algunos productos están puestos de forma comica, como por ejemplo "Zombie high heels" (¡Estás invitado a encontrarlo con nuesto buscador :D!), los precios están en Tenge kazajo (moneda de Kazajistán) y no hay envio, tu te las apañas para ir a recoger los articulos (Si sobrevives a los zombies :D)
+La idea fue realizar una tienda online en un apocalipsis zombie, donde puedes comprar todo lo necesario para sobrevivir o al menos intentarlo... Algunos productos están puestos de forma cómica, como por ejemplo "Zombie high heels" (¡Estás invitado a encontrarlo con nuestro buscador :D!), los precios están en Tenge kazajo (moneda de Kazajistán) y no hay envío, tu te las apañas para ir a recoger los artículos (Si sobrevives a los zombies :D)
 
-### Inicio de sesion
-![Pagina de inicio de sesion](./toReadme/Screenshot_1.png)
+### Inicio de sesión
+![Pagina de inicio de sesión](./toReadme/Screenshot_1.png)
 
 ### Tienda y carrito
 ![Tienda y carrito](./toReadme/Screenshot_2.png)
@@ -121,9 +121,9 @@ La idea fue realizar una tienda online en un apocalipsis zombie, donde puedes co
 ### Pedidos y pago
 ![Pedidos y pago](./toReadme/Screenshot_3.png)
 
-## Organizacion
+## Organización
 
-Para organizar las tareas hemos utilizado el aplicativo [Trello](https://trello.com/) con el que se puede gestionar comodamente las tareas y "Tickets"
+Para organizar las tareas hemos utilizado el aplicativo [Trello](https://trello.com/) con el que se puede gestionar cómodamente las tareas y "Tickets"
 
 ### Captura del Trello
 ![Captura del Trello](./toReadme/Trello.png)
@@ -133,7 +133,7 @@ Para organizar las tareas hemos utilizado el aplicativo [Trello](https://trello.
 ## Nombre en el Navbar
 ![NavBar](./toReadme/NavBar_Screenshot.png)
 
-Queriamos mostrar la inicial del usuario logueado dentro de la barra de navegación, el problema estaba en que en el localStorage solo almacenabamos el token actual, y no el username, entonces, al abrir la aplicación crasheaba, esto lo solucionamos haciendo que cuando se haga login se almacene el username en el localStorage.
+Queríamos mostrar la inicial del usuario logueado dentro de la barra de navegación, el problema estaba en que en el localStorage solo almacenábamos el token actual, y no el username, entonces, al abrir la aplicación crasheaba, esto lo solucionamos haciendo que cuando se haga login se almacene el username en el localStorage.
 
 ### Captura de la solución
 
@@ -143,17 +143,17 @@ Queriamos mostrar la inicial del usuario logueado dentro de la barra de navegaci
 
 ![Filtro por genero](./toReadme/Store_Screenshot.png)
 
-El objetivo era hacer que el selector de categorias tuviese tantas opciones como categorias en el servidor, para esto hacemos primero una llamada al servidor que nos devuelve todas las opciones y mapeamos el resultado de la siguiente forma:
+El objetivo era hacer que el selector de categorías tuviese tantas opciones como categorías en el servidor, para esto hacemos primero una llamada al servidor que nos devuelve todas las opciones y mapeamos el resultado de la siguiente forma:
 
-![Captura de la solucion](./toReadme/Store_Code.png)
+![Captura de la solución](./toReadme/Store_Code.png)
 
-Así logramos que cada opcion tenga su nombre y como `value` su id, esto ultimo lo usaremos para una vez selecciones una opcion se lance la llamada a la API y esta nos devuelva los articulos que pertenecen a esa categoria.
+Así logramos que cada opción tenga su nombre y como `value` su id, esto ultimo lo usaremos para una vez selecciones una opción se lance la llamada a la API y esta nos devuelva los artículos que pertenecen a esa categoría.
 
 ## Cantidad en la cesta
 
-![Captura de la solucion](./toReadme/Cart_Screenshot.png)
+![Captura de la solución](./toReadme/Cart_Screenshot.png)
 
-En un primer lugar tratamos de que las cantidades se manejaran con un estado local del componente `cart`, pero tras varios debugueos descubrimos que esto dificultaba el control de los estados, finalmente optamos por usar en estado global para manejarlo, de esta forma nos asegurabamos la sincronización completa en todos los componentes.
+En un primer lugar tratamos de que las cantidades se manejaran con un estado local del componente `cart`, pero tras varios debugueos descubrimos que esto dificultaba el control de los estados, finalmente optamos por usar en estado global para manejarlo, de esta forma nos asegurábamos la sincronización completa en todos los componentes.
 
 
 ## Buscador de productos
@@ -163,13 +163,13 @@ En un primer lugar tratamos de que las cantidades se manejaran con un estado loc
 
 # Agradecimientos
 
-Agradecer a nuestros profesores [Sofia](https://github.com/SofiaPinilla) [Germán](https://github.com/GeerDev) e [Ivan](https://github.com/ivanpuebla10) por enseñarnos a usar React y su paciencia con nosotros. Tambien agradecer a todos mis compañeros del Bootcamp por siempre estar ahí para aportar soluciones o simplemente un punto de vista critico.
+Agradecer a nuestros profesores [Sofia](https://github.com/SofiaPinilla) [Germán](https://github.com/GeerDev) e [Ivan](https://github.com/ivanpuebla10) por enseñarnos a usar React y su paciencia con nosotros. También agradecer a todos mis compañeros del BootCamp por siempre estar ahí para aportar soluciones o simplemente un punto de vista critico.
 
 # En el tintero
 
 - Implementar imagen de perfil.
 
-- Opcion para varios carritos
+- Opción para varios carritos
 
 - Lista de deseos
 
