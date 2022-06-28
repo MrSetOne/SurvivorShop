@@ -13,7 +13,7 @@
 
     - [Concepto e inspiración](#concepto-e-inspiración)
 
-    -[Organizacion](#)
+    - [Organizacion](#)
 
 - [Retos presentados](#)
 
@@ -21,9 +21,9 @@
 
     - [XXXXXXXXXX](#)
 
-- [Agradecimientos](#)
+- [Agradecimientos](#agradecimientos)
 
-- [En el tintero](#)
+- [En el tintero](#en-el-tintero)
 
 - [Autores](#)
 
@@ -125,3 +125,25 @@ Para organizar las tareas hemos utilizado el aplicativo [Trello](https://trello.
 ![Captura del Trello](./toReadme/Trello.png)
 
 # Retos presentados
+
+# Agradecimientos
+
+Agradecer a nuestros profesores [Sofia](https://github.com/SofiaPinilla) [Germán](https://github.com/GeerDev) e [Ivan](https://github.com/ivanpuebla10) por enseñarnos a usar React y su paciencia con nosotros. Tambien agradecer a todos mis compañeros del Bootcamp por siempre estar ahí para aportar soluciones o simplemente un punto de vista critico.
+
+# En el tintero
+
+- Implementar imagen de perfil.
+
+- Opcion para varios carritos
+
+- Lista de deseos
+
+- Vista de Admin
+
+- Sistema de comentarios
+
+# Autores
+
+### [Michael L. Sánchez](https://github.com/MrSetOne)
+
+### [Alex Tebbitt](https://github.com/alextebbitt)
