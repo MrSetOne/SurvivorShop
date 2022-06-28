@@ -104,4 +104,14 @@ El proyecto se origina en el bootcam de FullStack en [TheBridge](https://www.the
 
 ## Concepto e inspiración
 
+La idea fue realizar una tienda online en un apocalipsis zombie, donde puedes comprar todo lo necesario para sobrevivir o al menos intenterlo... Algunos productos están puestos de forma comica, como por ejemplo "Zombie high heels" (¡Estás invitado a encontrarlo con nuesto buscador :D!), los precios están en Tenge kazajo (moneda de Kazajistán) y no hay envio, tu te las apañas para ir a recoger los articulos (Si sobrevives a los zombies :D)
+
+### Inicio de sesion
+![Pagina de inicio de sesion](./toReadme/Screenshot_1.png)
+
+### Tienda y carrito
+![Tienda y carrito](./toReadme/Screenshot_2.png)
+
+### Pedidos y pago
+![Pedidos y pago](./toReadme/Screenshot_3.png)
 
