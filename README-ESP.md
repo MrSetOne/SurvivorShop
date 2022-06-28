@@ -17,11 +17,11 @@
 
 - [Retos presentados](#retos-presentados)
 
-    - [Nombre en el Navbar](#)
+    - [Nombre en el Navbar](#nombre-en-el-navbar)
 
-    - [Filtro por genero](#)
+    - [Filtro por genero](#filtro-por-genero)
 
-    - [Cantidad en la cesta](#)
+    - [Cantidad en la cesta](#cantidad-en-la-cesta)
 
     - [Buscador de productos](#)
 
@@ -143,8 +143,22 @@ Queriamos mostrar la inicial del usuario logueado dentro de la barra de navegaci
 
 ![Filtro por genero](./toReadme/Store_Screenshot.png)
 
-El objetivo era hacer que el selector de categorias tuviese tantas opciones como categorias en el servidor
+El objetivo era hacer que el selector de categorias tuviese tantas opciones como categorias en el servidor, para esto hacemos primero una llamada al servidor que nos devuelve todas las opciones y mapeamos el resultado de la siguiente forma:
 
+![Captura de la solucion](./toReadme/Store_Code.png)
+
+Así logramos que cada opcion tenga su nombre y como `value` su id, esto ultimo lo usaremos para una vez selecciones una opcion se lance la llamada a la API y esta nos devuelva los articulos que pertenecen a esa categoria.
+
+## Cantidad en la cesta
+
+![Captura de la solucion](./toReadme/Cart_Screenshot.png)
+
+En un primer lugar tratamos de que las cantidades se manejaran con un estado local del componente `cart`, pero tras varios debugueos descubrimos que esto dificultaba el control de los estados, finalmente optamos por usar en estado global para manejarlo, de esta forma nos asegurabamos la sincronización completa en todos los componentes.
+
+
+## Buscador de productos
+
+¡¡¡ ESPERANDO A ALEX !!!
 
 
 # Agradecimientos
