@@ -7,11 +7,9 @@
 
     - [Instalación y despliegue](#instalación-y-despliegue)
 
-    - [Tecnologías utilizadas](#)
+    - [Tecnologías utilizadas](#tecnologías-utilizadas)
 
-    - [Origen](#)
-
-    - [Objetivos](#)
+    - [Origen](#origen)
 
     - [Concepto e inspiración](#)
 
@@ -97,5 +95,13 @@ const project = {
     }
 } 
 ```
+
+## Origen
+
+![TheBridge](./toReadme/thebridgelogo.svg)
+
+El proyecto se origina en el bootcam de FullStack en [TheBridge](https://www.thebridge.tech/), consiste en otrogar de frontEnd a un proyecto de backEnd anterior, consiguiendo así un proyecto Full-Stack. El objetivo principal es crear un e-comerce SPA (Single Page Aplication) funcional, usando Hooks y contexts.
+
+## Concepto e inspiración
 
 
