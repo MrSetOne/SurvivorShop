@@ -13,19 +13,23 @@
 
     - [Concepto e inspiración](#concepto-e-inspiración)
 
-    - [Organizacion](#)
+    - [Organizacion](#organizacion)
 
-- [Retos presentados](#)
+- [Retos presentados](#retos-presentados)
 
-    - [XXXXXXXXXX](#)
+    - [Nombre en el Navbar](#)
 
-    - [XXXXXXXXXX](#)
+    - [Filtro por genero](#)
+
+    - [Cantidad en la cesta](#)
+
+    - [Buscador de productos](#)
 
 - [Agradecimientos](#agradecimientos)
 
 - [En el tintero](#en-el-tintero)
 
-- [Autores](#)
+- [Autores](#autores)
 
 # Sobre el proyecto
 
@@ -125,6 +129,23 @@ Para organizar las tareas hemos utilizado el aplicativo [Trello](https://trello.
 ![Captura del Trello](./toReadme/Trello.png)
 
 # Retos presentados
+
+## Nombre en el Navbar
+![NavBar](./toReadme/NavBar_Screenshot.png)
+
+Queriamos mostrar la inicial del usuario logueado dentro de la barra de navegación, el problema estaba en que en el localStorage solo almacenabamos el token actual, y no el username, entonces, al abrir la aplicación crasheaba, esto lo solucionamos haciendo que cuando se haga login se almacene el username en el localStorage.
+
+### Captura de la solución
+
+![Captura de la solución](./toReadme/NavBar_code.png)
+
+## Filtro por genero
+
+![Filtro por genero](./toReadme/Store_Screenshot.png)
+
+El objetivo era hacer que el selector de categorias tuviese tantas opciones como categorias en el servidor
+
+
 
 # Agradecimientos
 
