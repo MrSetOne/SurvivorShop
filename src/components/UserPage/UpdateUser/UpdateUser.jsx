@@ -1,18 +1,16 @@
 import { useContext, useEffect } from "react";
 import { UserContext } from "../../../context/UserContext/UserState";
 import { Form, Input, Button } from "antd";
-import { useNavigate } from "react-router-dom";
 import '../UpdateUser/UpdateUser.scss';
 
 
 
-const UpdateUser = () => {
+const UpdateUser = ({changeNeedUpdate}) => {
     const {user, updateUser} = useContext(UserContext)
-    const navigate = useNavigate()
 
-    const onFinish = (values) => {
-      updateUser(values)
-      navigate("/")
+    const onFinish = async(values) => {
+      await updateUser(values)
+      changeNeedUpdate(false)
     }
 
     const onFinishFailed = (errorInfo) => {

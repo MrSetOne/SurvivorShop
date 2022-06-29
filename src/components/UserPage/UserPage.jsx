@@ -29,7 +29,7 @@ const UserPage = () => {
         <UserOutlined />
       </div>
       <div className="UserInfo-div">
-        {needUpdate ? <UpdateUser /> : <UserInfo />}
+        {needUpdate ? <UpdateUser changeNeedUpdate={changeNeedUpdate}/> : <UserInfo />}
       </div>
       <div className="button-div">
         <button
