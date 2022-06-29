@@ -7,7 +7,7 @@ import '../UserPage/Userpage.scss'
 
 const UserPage = () => {
 
-  const {user , getUser} = useContext(UserContext)
+  const { getUser} = useContext(UserContext)
 
   const initialValue = {
     needUpdate:false,
@@ -15,7 +15,6 @@ const UserPage = () => {
   }
   
   const [needUpdate, changeNeedUpdate] = useState(initialValue.needUpdate);
-  const [isUpdating, changeIsUpdating] = useState(initialValue.isUpdating)
   
   useEffect(()=>{
     getUser();
@@ -36,10 +35,9 @@ const UserPage = () => {
           className="button"
           onClick={() => {
             changeNeedUpdate(!needUpdate);
-            changeIsUpdating(!isUpdating);
           }}
         >
-          {isUpdating ? "Go back" : "Update Yourself"}
+          {needUpdate ? "Go back" : "Update Yourself"}
         </button>
       </div>
     </main>
