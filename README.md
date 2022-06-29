@@ -187,3 +187,8 @@ We would like to thank our teachers [Sofia](https://github.com/SofiaPinilla) [Ge
 ### :point_right: [Michael L. Sánchez](https://github.com/MrSetOne) :point_left:
 
 ### :point_right: [Alex Tebbitt](https://github.com/alextebbitt) :point_left:
+
+
+ ### <center>Readme in:</center>
+
+ ### <center>[ENG](#)  |  [ESP](./README-ESP.md)</center>

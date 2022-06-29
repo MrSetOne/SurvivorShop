@@ -184,3 +184,7 @@ Agradecer a nuestros profesores [Sofia](https://github.com/SofiaPinilla) [Germá
 ### :point_right: [Michael L. Sánchez](https://github.com/MrSetOne) :point_left:
 
 ### :point_right: [Alex Tebbitt](https://github.com/alextebbitt) :point_left:
+
+ ### <center>Readme in:</center>
+
+ ### <center>[ENG](./README.md)  |  [ESP](#)</center>
